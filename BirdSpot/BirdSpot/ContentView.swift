@@ -13,11 +13,20 @@ struct ContentView: View {
             .padding()
         Text("Ya like birds?")
             .padding()
+        PhotoView()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct PhotoView: View {
+    var body: some View {
+        Image("Bird")
+            .resizable()
+            .scaledToFit()
     }
 }

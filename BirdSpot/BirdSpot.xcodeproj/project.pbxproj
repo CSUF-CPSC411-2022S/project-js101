@@ -44,6 +44,7 @@
 		7AA0755F27C70FAB0008F8BE /* BirdSpotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BirdSpotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AA0756327C70FAB0008F8BE /* BirdSpotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdSpotUITests.swift; sourceTree = "<group>"; };
 		7AA0756527C70FAB0008F8BE /* BirdSpotUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdSpotUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7AA0757227C713E20008F8BE /* .gitignore.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = .gitignore.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +75,7 @@
 		7AA0753C27C70FA40008F8BE = {
 			isa = PBXGroup;
 			children = (
+				7AA0757227C713E20008F8BE /* .gitignore.md */,
 				7AA0754727C70FA40008F8BE /* BirdSpot */,
 				7AA0755827C70FAB0008F8BE /* BirdSpotTests */,
 				7AA0756227C70FAB0008F8BE /* BirdSpotUITests */,
