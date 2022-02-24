@@ -4,7 +4,7 @@
 
 Project roles :
 
-Abhianv Arora -
+Abhianv Arora - Explore birds by appearance and size.
 
 Vishvesh Dumbre -
 
