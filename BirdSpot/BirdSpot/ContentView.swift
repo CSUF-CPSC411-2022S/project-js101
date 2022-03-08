@@ -24,17 +24,19 @@ struct MenuBar: View {
                             Button("Language",action: changeLanguage)
                             Button("Color Blind Mode", action: toggleColorBlindMode)
                         } label: {
-                            Label("", systemImage: "paperplane")
+                            Image(systemName: "line.3.horizontal")
+                                .foregroundColor(color.textColor)
                         }
                     } else {
                         Button(action: goBack) {
-                            Label("", systemImage: "arrowshape.turn.up.left")
+                            Image(systemName: "arrowshape.turn.up.left")
+                                .foregroundColor(color.textColor)
                         }
                     }
                 }
                     .modifier(menuModifier(menuColor: $color))
                     .frame(width:geometry.size.width)
-        }
+        }.frame(height: 54)
     }
 }
 
@@ -57,9 +59,9 @@ struct HomeScreen: View {
     @State var titleColor = (backColor: Color.gray, textColor: Color.white)
     @State var ismainmenu = true
     var body: some View {
-        VStack{
-            MenuBar(name: $viewName, color: $titleColor , isMainMenu: $ismainmenu)
-            VStack{
+        GeometryReader { geometrey in
+            VStack(spacing: 0){
+                MenuBar(name: $viewName, color: $titleColor , isMainMenu: $ismainmenu)
                 PhotoView()
             }
         }
@@ -79,10 +81,14 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 struct PhotoView: View {
+    @State var viewName = "PhotoView"
+    @State var titleColor = (backColor: Color.yellow, textColor: Color.black)
+    @State var ismainmenu = false
     var body: some View {
-        Image("Bird")
-            .resizable()
-            .scaledToFit()
-            .padding(20)
+            MenuBar(name: $viewName, color: $titleColor , isMainMenu: $ismainmenu)
+            Image("Bird")
+                .resizable()
+                .scaledToFit()
+                .padding(20)
     }
 }
