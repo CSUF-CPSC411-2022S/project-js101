@@ -11,3 +11,4 @@ func openLocationMenu() { }
 func changeLanguage() { }
 func toggleColorBlindMode() { }
 func goBack() { }
+func openPhotoView() { }

@@ -12,6 +12,9 @@ struct MenuBar: View {
     @Binding var name: String
     @Binding var color: (backColor: Color, textColor: Color)
     @Binding var isMainMenu: Bool
+    
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    
     var body: some View {
         GeometryReader { geometry in
                 HStack {
@@ -26,17 +29,23 @@ struct MenuBar: View {
                         } label: {
                             Image(systemName: "line.3.horizontal")
                                 .foregroundColor(color.textColor)
+                                .padding(.trailing, 10)
                         }
                     } else {
-                        Button(action: goBack) {
+                        Button(action: {
+                            self.mode.wrappedValue.dismiss()
+                        }) {
                             Image(systemName: "arrowshape.turn.up.left")
                                 .foregroundColor(color.textColor)
+                                .padding(.trailing, 10)
                         }
                     }
                 }
-                    .modifier(menuModifier(menuColor: $color))
+                    .modifier(menuModifier(menuColor: $color, isMM: $isMainMenu))
                     .frame(width:geometry.size.width)
-        }.frame(height: 54)
+        }
+            .frame(height: 60)
+            .hiddenNavBarSyle()
     }
 }
 
@@ -44,13 +53,22 @@ struct MenuBar: View {
 
 struct menuModifier: ViewModifier {
     @Binding var menuColor: (backColor: Color, textColor: Color)
+    @Binding var isMM: Bool
     func body(content: Content) -> some View {
-        content
-            .font(.custom("Courier New", size:24))
-            .padding(.top, 20)
-            .padding(.leading,10)
-            .padding(.bottom,10)
-            .background(menuColor.backColor)
+        if isMM {
+            content
+                .font(.system(size:24))
+                .frame(height: 60)
+                .padding(.leading,10)
+                .background(menuColor.backColor)
+        } else {
+            content
+                .font(.system(size:24))
+                .frame(height: 60)
+                .padding(.leading,10)
+                .background(menuColor.backColor)
+                .cornerRadius(10)
+        }
     }
 }
 
@@ -62,7 +80,11 @@ struct HomeScreen: View {
         GeometryReader { geometrey in
             VStack(spacing: 0){
                 MenuBar(name: $viewName, color: $titleColor , isMainMenu: $ismainmenu)
-                PhotoView()
+                NavigationView {
+                    NavigationLink(destination: PhotoView()) {
+                        Text("Open PhotoView")
+                    }
+                }.hiddenNavBarSyle()
             }
         }
     }
@@ -85,10 +107,30 @@ struct PhotoView: View {
     @State var titleColor = (backColor: Color.yellow, textColor: Color.black)
     @State var ismainmenu = false
     var body: some View {
-            MenuBar(name: $viewName, color: $titleColor , isMainMenu: $ismainmenu)
-            Image("Bird")
-                .resizable()
-                .scaledToFit()
-                .padding(20)
+        GeometryReader { geometry in
+            VStack(spacing: 0){
+                    MenuBar(name: $viewName, color: $titleColor , isMainMenu: $ismainmenu)
+                    Text("Hello")
+                    Image("Bird")
+                        .resizable()
+                        .scaledToFit()
+                    Spacer()
+            }
+        }
+    }
+        
+}
+
+struct hideNavBar : ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .navigationBarTitle("",displayMode: .inline)
+            .navigationBarHidden(true)
+    }
+}
+
+extension View {
+    func hiddenNavBarSyle() -> some View {
+        modifier(hideNavBar())
     }
 }
