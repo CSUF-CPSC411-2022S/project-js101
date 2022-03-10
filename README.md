@@ -3,13 +3,22 @@
 <h2> Team Members - Abhhinav Arora,	Vishvesh Dumbre, Chukwudi Ikem,Jeffrey Martz <h2>
   
   <h3>  Bird Spot App</h3>
+ 
 
 Project roles :
 
-Abhianv Arora - Adding the Size Feature.
+Abhianv Arora - Bird Selection View
 
-Vishvesh Dumbre -
+Vishvesh Dumbre - Bird information View
 
-Chukwudi Ikem - 
+Chukwudi Ikem - Color Palette View
 
-Jeffrey Martz -
+Jeffrey Martz - Menu View
+
+  <h3> How to run </h3>
+  
+  Clone and run project in swift.
+  For current PhotographerPhotos branch add InspectView package via the swift package installer at: https://github.com/nalexn/ViewInspector
+
+
+  
