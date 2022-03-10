@@ -33,11 +33,15 @@ struct ColorPaletteView: View {
                         Spacer()
                     }
                     // TODO: run tests to ensure working textfield
-                    TextField(text: $color, prompt: Text("search")) {
+                    HStack {
+                        Image("search-icon")
+                            .resizable().scaledToFit()
+                        TextField(text: $color, prompt: Text("search")) {
                             
+                        }
                     }.padding(6)
-                    .overlay(RoundedRectangle(cornerRadius: 15).stroke(Color.black, lineWidth: 2))
-                    .frame(width: geometry.size.width * 0.90)
+                        .overlay(RoundedRectangle(cornerRadius: 15).stroke(Color.black, lineWidth: 2))
+                        .frame(width: geometry.size.width * 0.90, height: geometry.size.height * 0.05)
                     
                 
                 }
