@@ -11,7 +11,7 @@ import SwiftUI
 struct BirdSpotApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ColorPaletteView()
         }
     }
 }
