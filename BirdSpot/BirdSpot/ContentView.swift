@@ -55,20 +55,11 @@ struct menuModifier: ViewModifier {
     @Binding var menuColor: (backColor: Color, textColor: Color)
     @Binding var isMM: Bool
     func body(content: Content) -> some View {
-        if isMM {
             content
                 .font(.system(size:24))
                 .frame(height: 60)
                 .padding(.leading,10)
                 .background(menuColor.backColor)
-        } else {
-            content
-                .font(.system(size:24))
-                .frame(height: 60)
-                .padding(.leading,10)
-                .background(menuColor.backColor)
-                .cornerRadius(10)
-        }
     }
 }
 
@@ -81,10 +72,8 @@ struct HomeScreen: View {
             VStack(spacing: 0){
                 MenuBar(name: $viewName, color: $titleColor , isMainMenu: $ismainmenu)
                 NavigationView {
-                    NavigationLink(destination: PhotoView()) {
-                        Text("Open PhotoView")
-                    }
-                }.hiddenNavBarSyle()
+                    ColorPaletteView().hiddenNavBarSyle() 
+                }
             }
         }
     }

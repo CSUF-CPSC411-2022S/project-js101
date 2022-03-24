@@ -15,7 +15,7 @@
 		7AA0756427C70FAB0008F8BE /* BirdSpotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA0756327C70FAB0008F8BE /* BirdSpotUITests.swift */; };
 		7AA0756627C70FAB0008F8BE /* BirdSpotUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA0756527C70FAB0008F8BE /* BirdSpotUITestsLaunchTests.swift */; };
 		7AA0757A27D6CB3E0008F8BE /* buttonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA0757927D6CB3E0008F8BE /* buttonFunctions.swift */; };
-		7AD22DDE27D9BEE600CA13F0 /* ViewInspector in Resources */ = {isa = PBXBuildFile; fileRef = 7AD22DDD27D9BEDF00CA13F0 /* ViewInspector */; };
+		7AF0055227EC5A5D00C58875 /* ColorPaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF0055127EC5A5D00C58875 /* ColorPaletteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +48,7 @@
 		7AA0756527C70FAB0008F8BE /* BirdSpotUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdSpotUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7AA0757227C713E20008F8BE /* .gitignore.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = .gitignore.md; sourceTree = "<group>"; };
 		7AA0757927D6CB3E0008F8BE /* buttonFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonFunctions.swift; sourceTree = "<group>"; };
-		7AD22DDD27D9BEDF00CA13F0 /* ViewInspector */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ViewInspector; path = ../../../ViewInspector; sourceTree = "<group>"; };
+		7AF0055127EC5A5D00C58875 /* ColorPaletteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPaletteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +101,7 @@
 		7AA0754727C70FA40008F8BE /* BirdSpot */ = {
 			isa = PBXGroup;
 			children = (
+				7AF0055127EC5A5D00C58875 /* ColorPaletteView.swift */,
 				7AA0757927D6CB3E0008F8BE /* buttonFunctions.swift */,
 				7AA0754827C70FA40008F8BE /* BirdSpotApp.swift */,
 				7AA0754A27C70FA40008F8BE /* ContentView.swift */,
@@ -138,7 +139,6 @@
 		7AD22DDC27D9BEDF00CA13F0 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				7AD22DDD27D9BEDF00CA13F0 /* ViewInspector */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -256,7 +256,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AD22DDE27D9BEE600CA13F0 /* ViewInspector in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +275,7 @@
 			files = (
 				7AA0754B27C70FA40008F8BE /* ContentView.swift in Sources */,
 				7AA0757A27D6CB3E0008F8BE /* buttonFunctions.swift in Sources */,
+				7AF0055227EC5A5D00C58875 /* ColorPaletteView.swift in Sources */,
 				7AA0754927C70FA40008F8BE /* BirdSpotApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
