@@ -106,35 +106,36 @@ struct InformationView: View {
     @State var ismainmenu = false
     var body: some View {
         GeometryReader { geometry in
-            VStack(spacing: 0){
+                VStack(spacing: 0) {
                     MenuBar(name: $viewName, color: $titleColor , isMainMenu: $ismainmenu)
                     Text("The information page will have birds to browse and read information about")
-                   
-                    Image("Bald Eagle")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 150.0, height: 90.0, alignment: .center)
-                        .border(Color.gray, width: 2.0)
-                        .clipped()
-                    Text("Bald Eagle")
-                
-                    Image("Blue Jay")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 150.0, height: 90.0, alignment: .center)
-                        .border(Color.gray, width: 2.0)
-                        .clipped()
-                    Text("Blue Jay")
-                
-                    Image("Northern Cardinal")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 150.0, height: 90.0, alignment: .center)
-                        .border(Color.gray, width: 2.0)
-                        .clipped()
-                    Text("Northern Cardinal")
-                    
-        
+                    List {
+                        Section(header: Text("Bald Eagle")) {
+                            NavigationLink(destination: BaldEagle()) {
+                                Image("Bald Eagle")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .clipped()
+                            }
+                        }
+                        Section(header: Text("Blue Jay")) {
+                            NavigationLink(destination: BlueJay()) {
+                                Image("Blue Jay")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .clipped()
+                            }
+                        }
+                        Section(header: Text("Northern Cardinal")) {
+                            NavigationLink(destination: NorthernCardinal()) {
+                                Image("Northern Cardinal")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .clipped()
+                            }
+                        }
+                    }
+
                     Spacer()
             }
         }
