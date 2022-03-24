@@ -134,3 +134,55 @@ extension View {
         modifier(hideNavBar())
     }
 }
+
+
+List {
+                        Section(header: Text("Bald Eagle")) {
+                            NavigationLink(destination: BaldEagle()) {
+                                Image("Bald Eagle")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .clipped()
+                            }
+                        }
+                        Section(header: Text("Blue Jay")) {
+                            NavigationLink(destination: BlueJay()) {
+                                Image("Blue Jay")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .clipped()
+                            }
+                        }
+                        Section(header: Text("Northern Cardinal")) {
+                            NavigationLink(destination: NorthernCardinal()) {
+                                Image("Northern Cardinal")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .clipped()
+                            }
+                        }
+						Section(header: Text("North American Crow")) {
+                            NavigationLink(destination: NorthAmericanCrow()) {
+                                Image("North American Crow")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .clipped()
+                            }
+                        }
+						Section(header: Text("House Sparrow")) {
+                            NavigationLink(destination: HouseSparrow()) {
+                                Image("House Sparrow")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .clipped()
+                            }
+                        }
+						Section(header: Text("House Finch")) {
+                            NavigationLink(destination: HouseFinch()) {
+                                Image("House Finch")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .clipped()
+                            }
+                        }
+                    }
