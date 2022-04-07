@@ -185,4 +185,30 @@ List {
                                     .clipped()
                             }
                         }
+						Section(header: Text("American Robin")) {
+                            NavigationLink(destination: HouseFinch()) {
+                                Image("American robin")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .clipped()
+                            }
+                        }
+						Section(header: Text("Mallard")) {
+                            NavigationLink(destination: HouseFinch()) {
+                                Image("Mallard Duck")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .clipped()
+                            }
+                        }
+
+						Section(header: Text("Golden Eagle")) {
+							NavigationLink(destination: HouseFinch()) {
+								Image("Golden Eagle")
+									.resizable()
+									.aspectRatio(contentMode: .fill)
+									.clipped()
+							}
+						}
+
                     }
