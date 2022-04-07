@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7A0D6D3027EC24BF000C97BB /* contenviewinfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0D6D2F27EC24BF000C97BB /* contenviewinfo.swift */; };
+		7A60937227FE5D55004858FA /* stubstruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A60937127FE5D55004858FA /* stubstruct.swift */; };
 		7AA0754927C70FA40008F8BE /* BirdSpotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA0754827C70FA40008F8BE /* BirdSpotApp.swift */; };
 		7AA0754B27C70FA40008F8BE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA0754A27C70FA40008F8BE /* ContentView.swift */; };
 		7AA0754D27C70FAB0008F8BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AA0754C27C70FAB0008F8BE /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		7A0D6D2F27EC24BF000C97BB /* contenviewinfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contenviewinfo.swift; sourceTree = "<group>"; };
+		7A60937127FE5D55004858FA /* stubstruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stubstruct.swift; sourceTree = "<group>"; };
 		7AA0754527C70FA40008F8BE /* BirdSpot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BirdSpot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AA0754827C70FA40008F8BE /* BirdSpotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdSpotApp.swift; sourceTree = "<group>"; };
 		7AA0754A27C70FA40008F8BE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				7AA0754827C70FA40008F8BE /* BirdSpotApp.swift */,
 				7AA0754A27C70FA40008F8BE /* ContentView.swift */,
 				7A0D6D2F27EC24BF000C97BB /* contenviewinfo.swift */,
+				7A60937127FE5D55004858FA /* stubstruct.swift */,
 				7AA0754C27C70FAB0008F8BE /* Assets.xcassets */,
 				7AA0754E27C70FAB0008F8BE /* Preview Content */,
 			);
@@ -262,6 +265,7 @@
 			files = (
 				7AA0754B27C70FA40008F8BE /* ContentView.swift in Sources */,
 				7AA0754927C70FA40008F8BE /* BirdSpotApp.swift in Sources */,
+				7A60937227FE5D55004858FA /* stubstruct.swift in Sources */,
 				7A0D6D3027EC24BF000C97BB /* contenviewinfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

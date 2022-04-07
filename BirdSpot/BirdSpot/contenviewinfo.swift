@@ -20,6 +20,14 @@ struct BaldEagle: View {
                 .clipped()
             Text("Bald Eagle")
             Text(basicinfo)
+            List{
+            NavigationLink(destination: Moreimages()){
+                Text("For more images of Bald Eagle")
+            }
+            NavigationLink(destination: Moreinformation()){
+                Text("For more information of Bald Eagle")
+            }
+            }
         }
     }
 }
@@ -36,6 +44,16 @@ struct BlueJay: View {
                 .clipped()
             Text("Blue Jay")
             Text(basicinfo)
+            List{
+            NavigationLink(destination: Moreimages()){
+                Text("For more images of Blue Jay")
+            }
+            NavigationLink(destination: Moreinformation()){
+                Text("For more information of Blue Jay")
+            }
+            }
+            
+            
         }
     }
 }
@@ -52,6 +70,14 @@ struct NorthernCardinal: View {
                 .clipped()
             Text("Northern Cardinal")
             Text(basicinfo)
+            List{
+            NavigationLink(destination: Moreimages()){
+                Text("For more images of Northern Cardinal")
+            }
+            NavigationLink(destination: Moreinformation()){
+                Text("For more information of Northern Cardinal")
+            }
+            }
             
         }
     }
