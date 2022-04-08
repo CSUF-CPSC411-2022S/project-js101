@@ -5,6 +5,7 @@
 //  Created by csuftitan on 2/23/22.
 //
 
+
 import SwiftUI
 
 
@@ -55,11 +56,20 @@ struct menuModifier: ViewModifier {
     @Binding var menuColor: (backColor: Color, textColor: Color)
     @Binding var isMM: Bool
     func body(content: Content) -> some View {
+        if isMM {
             content
                 .font(.system(size:24))
                 .frame(height: 60)
                 .padding(.leading,10)
                 .background(menuColor.backColor)
+        } else {
+            content
+                .font(.system(size:24))
+                .frame(height: 60)
+                .padding(.leading,10)
+                .background(menuColor.backColor)
+                .cornerRadius(10)
+        }
     }
 }
 
@@ -72,8 +82,10 @@ struct HomeScreen: View {
             VStack(spacing: 0){
                 MenuBar(name: $viewName, color: $titleColor , isMainMenu: $ismainmenu)
                 NavigationView {
-                    ColorPaletteView().hiddenNavBarSyle() 
-                }
+                    NavigationLink(destination: InformationView()) {
+                        Text("Open Information View")
+                    }
+                }.hiddenNavBarSyle()
             }
         }
     }
@@ -91,18 +103,42 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-struct PhotoView: View {
-    @State var viewName = "PhotoView"
-    @State var titleColor = (backColor: Color.yellow, textColor: Color.black)
+struct InformationView: View {
+    @State var viewName = "Information View"
+    @State var titleColor = (backColor: Color.pink, textColor: Color.black)
     @State var ismainmenu = false
     var body: some View {
         GeometryReader { geometry in
-            VStack(spacing: 0){
+                VStack(spacing: 0) {
                     MenuBar(name: $viewName, color: $titleColor , isMainMenu: $ismainmenu)
-                    Text("Hello")
-                    Image("Bird")
-                        .resizable()
-                        .scaledToFit()
+                    Text("The information page will have birds to browse and read information about")
+                    List {
+                        Section(header: Text("Bald Eagle")) {
+                            NavigationLink(destination: BaldEagle()) {
+                                Image("Bald Eagle")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .clipped()
+                            }
+                        }
+                        Section(header: Text("Blue Jay")) {
+                            NavigationLink(destination: BlueJay()) {
+                                Image("Blue Jay")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .clipped()
+                            }
+                        }
+                        Section(header: Text("Northern Cardinal")) {
+                            NavigationLink(destination: NorthernCardinal()) {
+                                Image("Northern Cardinal")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .clipped()
+                            }
+                        }
+                    }
+
                     Spacer()
             }
         }
