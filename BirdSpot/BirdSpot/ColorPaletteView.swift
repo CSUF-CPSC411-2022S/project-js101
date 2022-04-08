@@ -80,7 +80,7 @@ struct ColorPaletteView: View {
                 
                 }
             }
-        }.hiddenNavBarSyle()
+        }.hiddenNavBarStyle()
     }
 }
 

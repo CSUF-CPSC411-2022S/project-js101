@@ -46,7 +46,7 @@ struct MenuBar: View {
                     .frame(width:geometry.size.width)
         }
             .frame(height: 60)
-            .hiddenNavBarSyle()
+            .hiddenNavBarStyle()
     }
 }
 
@@ -82,10 +82,14 @@ struct HomeScreen: View {
             VStack(spacing: 0){
                 MenuBar(name: $viewName, color: $titleColor , isMainMenu: $ismainmenu)
                 NavigationView {
+//                    NavigationLink(destination: ColorPaletteView()){
+//                        Text("Search")
+//                    }
                     NavigationLink(destination: InformationView()) {
                         Text("Open Information View")
                     }
-                }.hiddenNavBarSyle()
+                }.hiddenNavBarStyle()
+
             }
         }
     }
@@ -155,7 +159,7 @@ struct hideNavBar : ViewModifier {
 }
 
 extension View {
-    func hiddenNavBarSyle() -> some View {
+    func hiddenNavBarStyle() -> some View {
         modifier(hideNavBar())
     }
 }
