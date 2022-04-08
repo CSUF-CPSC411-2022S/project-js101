@@ -24,6 +24,9 @@ struct MenuBar: View {
                     if isMainMenu == true {
                         Menu {
                             Text("Settings")
+                            Button("Location",action: openLocationMenu)
+                            Button("Language",action: changeLanguage)
+                            Button("Color Blind Mode", action: toggleColorBlindMode)
                         } label: {
                             Image(systemName: "line.3.horizontal")
                                 .foregroundColor(color.textColor)
