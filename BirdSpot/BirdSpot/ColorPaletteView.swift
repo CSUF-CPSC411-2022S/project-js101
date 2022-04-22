@@ -49,31 +49,49 @@ struct ColorPaletteView: View {
                     VStack {
                         HStack {
                             Spacer()
-                            Circle().strokeBorder(Color.black, lineWidth: 3).background(Circle().foregroundColor(Color.red)).frame(width: geometry.size.width * 0.2, height: geometry.size.width * 0.2)
+                            NavigationLink(destination: InformationView(filter: "red")) {
+                                Circle().strokeBorder(Color.black, lineWidth: 3).background(Circle().foregroundColor(Color.red)).frame(width: geometry.size.width * 0.2, height: geometry.size.width * 0.2)
+                            }
                             Spacer()
-                            Circle().strokeBorder(Color.black, lineWidth: 3).background(Circle().foregroundColor(Color.gray)).frame(width: geometry.size.width * 0.2, height: geometry.size.width * 0.2)
+                            NavigationLink(destination: InformationView(filter: "gray")) {
+                                Circle().strokeBorder(Color.black, lineWidth: 3).background(Circle().foregroundColor(Color.gray)).frame(width: geometry.size.width * 0.2, height: geometry.size.width * 0.2)
+                            }
                             Spacer()
-                            Circle().strokeBorder(Color.black, lineWidth: 3).background(Circle().foregroundColor(Color.yellow)).frame(width: geometry.size.width * 0.2, height: geometry.size.width * 0.2)
-                            Spacer()
-                        }.padding()
-                        
-                        HStack {
-                            Spacer()
-                            Circle().strokeBorder(Color.black, lineWidth: 3).background(Circle().foregroundColor(Color.green)).frame(width: geometry.size.width * 0.2, height: geometry.size.width * 0.2)
-                            Spacer()
-                            Circle().strokeBorder(Color.black, lineWidth: 3).background(Circle().foregroundColor(Color.blue)).frame(width: geometry.size.width * 0.2, height: geometry.size.width * 0.2)
-                            Spacer()
-                            Circle().strokeBorder(Color.black, lineWidth: 3).background(Circle().foregroundColor(Color.purple)).frame(width: geometry.size.width * 0.2, height: geometry.size.width * 0.2)
+                            NavigationLink(destination: InformationView(filter: "yellow")) {
+                                Circle().strokeBorder(Color.black, lineWidth: 3).background(Circle().foregroundColor(Color.yellow)).frame(width: geometry.size.width * 0.2, height: geometry.size.width * 0.2)
+                            }
                             Spacer()
                         }.padding()
                         
                         HStack {
                             Spacer()
-                            Circle().strokeBorder(Color.black, lineWidth: 3).background(Circle().foregroundColor(Color.brown)).frame(width: geometry.size.width * 0.2, height: geometry.size.width * 0.2)
+                            NavigationLink(destination: InformationView(filter: "green")) {
+                                Circle().strokeBorder(Color.black, lineWidth: 3).background(Circle().foregroundColor(Color.green)).frame(width: geometry.size.width * 0.2, height: geometry.size.width * 0.2)
+                            }
                             Spacer()
-                            Circle().strokeBorder(Color.black, lineWidth: 3).background(Circle().foregroundColor(Color.white)).frame(width: geometry.size.width * 0.2, height: geometry.size.width * 0.2)
+                            NavigationLink(destination: InformationView(filter: "blue")) {
+                                Circle().strokeBorder(Color.black, lineWidth: 3).background(Circle().foregroundColor(Color.blue)).frame(width: geometry.size.width * 0.2, height: geometry.size.width * 0.2)
+                            }
                             Spacer()
-                            Circle().strokeBorder(Color.black, lineWidth: 3).background(Circle().foregroundColor(Color.black)).frame(width: geometry.size.width * 0.2, height: geometry.size.width * 0.2)
+                            NavigationLink(destination: InformationView(filter: "purple")) {
+                                Circle().strokeBorder(Color.black, lineWidth: 3).background(Circle().foregroundColor(Color.purple)).frame(width: geometry.size.width * 0.2, height: geometry.size.width * 0.2)
+                            }
+                            Spacer()
+                        }.padding()
+                        
+                        HStack {
+                            Spacer()
+                            NavigationLink(destination: InformationView(filter: "brown")) {
+                                Circle().strokeBorder(Color.black, lineWidth: 3).background(Circle().foregroundColor(Color.brown)).frame(width: geometry.size.width * 0.2, height: geometry.size.width * 0.2)
+                            }
+                            Spacer()
+                            NavigationLink(destination: InformationView(filter: "white")) {
+                                Circle().strokeBorder(Color.black, lineWidth: 3).background(Circle().foregroundColor(Color.white)).frame(width: geometry.size.width * 0.2, height: geometry.size.width * 0.2)
+                            }
+                            Spacer()
+                            NavigationLink(destination: InformationView(filter: "black")) {
+                                Circle().strokeBorder(Color.black, lineWidth: 3).background(Circle().foregroundColor(Color.black)).frame(width: geometry.size.width * 0.2, height: geometry.size.width * 0.2)
+                            }
                             Spacer()
                         }.padding()
                     }
@@ -83,5 +101,4 @@ struct ColorPaletteView: View {
         }.hiddenNavBarStyle()
     }
 }
-
 

@@ -82,12 +82,12 @@ struct HomeScreen: View {
             VStack(spacing: 0){
                 MenuBar(name: $viewName, color: $titleColor , isMainMenu: $ismainmenu)
                 NavigationView {
-//                    NavigationLink(destination: ColorPaletteView()){
-//                        Text("Search")
-//                    }
-                    NavigationLink(destination: InformationView()) {
-                        Text("Open Information View")
+                    NavigationLink(destination: ColorPaletteView()){
+                        Text("Search")
                     }
+//                    NavigationLink(destination: InformationView()) {
+//                        Text("Open Information View")
+//                    }
                 }.hiddenNavBarStyle()
 
             }
@@ -96,8 +96,10 @@ struct HomeScreen: View {
 }
 
 struct ContentView: View {
+    @StateObject var birds = DefaultBirds()
     var body: some View {
         HomeScreen()
+        .environmentObject(birds)
     }
 }
 
@@ -108,105 +110,39 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 struct InformationView: View {
+    @EnvironmentObject var data: DefaultBirds
     @State var viewName = "Information View"
     @State var titleColor = (backColor: Color.pink, textColor: Color.black)
     @State var ismainmenu = false
+    var filter: String = ""
     var body: some View {
         GeometryReader { geometry in
                 VStack(spacing: 0) {
                     MenuBar(name: $viewName, color: $titleColor , isMainMenu: $ismainmenu)
                     Text("The information page will have birds to browse and read information about")
                     List {
-                        Section(header: Text("Bald Eagle")) {
-                            NavigationLink(destination: BaldEagle()) {
-                                Image("Bald Eagle")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .clipped()
+                    if(filter != "") {
+                        ForEach(data.birds) {
+                            bird in
+                            if(bird.color == filter) {
+                                Section(header: Text(bird.name)) {
+                                    NavigationLink(destination: BirdDetail(filename: bird.filename)) {
+                                        bird.display()
+                                    }
+                                }
                             }
                         }
-                        Section(header: Text("Blue Jay")) {
-                            NavigationLink(destination: BlueJay()) {
-                                Image("Blue Jay")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .clipped()
+                    } else {
+                        ForEach(data.birds) {
+                            bird in
+                            Section(header: Text(bird.name)) {
+                                NavigationLink(destination: BirdDetail(filename: bird.filename)) {
+                                    bird.display()
+                                }
                             }
                         }
-                        Section(header: Text("Northern Cardinal")) {
-                            NavigationLink(destination: NorthernCardinal()) {
-                                Image("Northern Cardinal")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .clipped()
-                            }
-                        }
-                        Section(header: Text("American Crow")) {
-                            NavigationLink(destination: AmericanCrow()) {
-                                Image("crow")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .clipped()
-                            }
-                        
-                        }
-                        Section(header: Text("Crane")) {
-                            NavigationLink(destination: Crane()) {
-                                Image("Crane")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .clipped()
-                            }
-                        
-                        }
-                        Section(header: Text("Pelican")) {
-                            NavigationLink(destination: Pelican()) {
-                                Image("Pelican")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .clipped()
-                            }
-                        
-                        }
-                        Section(header: Text("Mountain BlueBird")) {
-                            NavigationLink(destination: MountainBlueBird()) {
-                                Image("blueBird")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .clipped()
-                            }
-                        
-                        }
-                        Section(header: Text("Scarlet Macaw")) {
-                            NavigationLink(destination: ScarletMacaw()) {
-                                Image("scarletmacaw")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .clipped()
-                            }
-                        
-                        }
-						Section(header: Text("Gray Hawk")) {
-                            NavigationLink(destination: grayhawk()) {
-                                Image("grayhawk")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .clipped()
-                            }
-                        
-                        }
-                        Section(header: Text("Great Gray Owl")) {
-                            NavigationLink(destination: greatgrayowl()) {
-                                Image("greatgrayowl")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .clipped()
-                            }
-                        
-                        }
-					
-					}
-
+                    }
+                }
                     Spacer()
             }
         }

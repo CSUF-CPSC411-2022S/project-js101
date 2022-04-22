@@ -12,7 +12,7 @@ struct BaldEagle: View {
     var basicinfo: String = "Kingdom: Animalia \nPhylum: Chordata \nClass: Aves \nOrder: Accipitriformes \nFamily: Accipitridae \nGenus: Haliaeetus \nSpecies: H. leucocephalus"
     var body: some View{
         VStack{
-            Image("Bald Eagle")
+            Image("BaldEagle")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 200.0, height: 120.0, alignment: .top)
@@ -36,7 +36,7 @@ struct BlueJay: View {
     var basicinfo: String = "Kingdom: Animalia \nPhylum: Chordata \nClass: Aves \nOrder: Passeriformes \nFamily: Corvidae \nGenus: Cyanocitta \nSpecies: C. cristata"
     var body: some View{
         VStack{
-            Image("Blue Jay")
+            Image("BlueJay")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 150.0, height: 90.0, alignment: .center)
@@ -62,7 +62,7 @@ struct NorthernCardinal: View {
     var basicinfo: String = "Kingdom: Animalia \nPhylum: Chordata \nClass: Aves \nOrder: Passeriformes \nFamily: Cardinalidae \nGenus: Cardinalis \nSpecies: C. cardinalis"
     var body: some View{
         VStack{
-            Image("Northern Cardinal")
+            Image("NorthernCardinal")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 150.0, height: 90.0, alignment: .center)
@@ -86,7 +86,7 @@ struct AmericanCrow: View {
     var basicinfo: String = "Kingdom: Animalia \nPhylum: Chordata \nClass: Aves \nOrder: Passeriformes \nFamily: Covirdae \nGenus: Corvus \nSpecies: C. brachyrhynchos"
     var body: some View{
         VStack{
-            Image("crow")
+            Image("Crow")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 150.0, height: 90.0, alignment: .center)
@@ -158,7 +158,7 @@ struct MountainBlueBird: View {
     var basicinfo: String = "Kingdom: Animalia \nPhylum: Chordata \nClass: Aves \nOrder: Passeriformes \nFamily: Turdidae \nGenus: Sialia \nSpecies: C. currucoldes"
     var body: some View{
         VStack{
-            Image("blueBird")
+            Image("BlueBird")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 150.0, height: 90.0, alignment: .center)
@@ -182,7 +182,7 @@ struct ScarletMacaw: View {
     var basicinfo: String = "Kingdom: Animalia \nPhylum: Chordata \nClass: Aves \nOrder: Psittaciformes \nFamily: Psittacidae \nGenus: Ara \nSpecies: A. Macao"
     var body: some View{
         VStack{
-            Image("scarletmacaw")
+            Image("ScarletMacaw")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 150.0, height: 90.0, alignment: .center)
@@ -202,11 +202,11 @@ struct ScarletMacaw: View {
         }
     }
 }
-struct grayhawk: View {
+struct GrayHawk: View {
     var basicinfo: String = "Kingdom: Animalia \nPhylum: Chordata \nClass: Aves \nOrder: Accipitriformes \nFamily: Accipitridae \nGenus: Buteo \nSpecies: A. plagiatus"
     var body: some View{
         VStack{
-            Image("grayhawk")
+            Image("GrayHawk")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 150.0, height: 90.0, alignment: .center)
@@ -226,11 +226,11 @@ struct grayhawk: View {
         }
     }
 }
-struct greatgrayowl: View {
+struct GreatGrayOwl: View {
     var basicinfo: String = "Kingdom: Animalia \nPhylum: Chordata \nClass: Aves \nOrder: Strigiformes \nFamily: Strigidae \nGenus: Strix \nSpecies: S. nebuiosa"
     var body: some View{
         VStack{
-            Image("greatgrayowl")
+            Image("GreatGrayOwl")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 150.0, height: 90.0, alignment: .center)
