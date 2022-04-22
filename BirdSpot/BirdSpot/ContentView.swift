@@ -121,10 +121,20 @@ struct InformationView: View {
                     MenuBar(name: $viewName, color: $titleColor , isMainMenu: $ismainmenu)
                     Text("The information page will have birds to browse and read information about")
                     List {
-                    if(filter != "") {
-                        ForEach(data.birds) {
-                            bird in
-                            if(bird.color == filter) {
+                        if(filter != "") {
+                            ForEach(data.birds) {
+                                bird in
+                                if(bird.color == filter) {
+                                    Section(header: Text(bird.name)) {
+                                        NavigationLink(destination: BirdDetail(filename: bird.filename)) {
+                                            bird.display()
+                                        }
+                                    }
+                                }
+                            }
+                        } else {
+                            ForEach(data.birds) {
+                                bird in
                                 Section(header: Text(bird.name)) {
                                     NavigationLink(destination: BirdDetail(filename: bird.filename)) {
                                         bird.display()
@@ -132,16 +142,6 @@ struct InformationView: View {
                                 }
                             }
                         }
-                    } else {
-                        ForEach(data.birds) {
-                            bird in
-                            Section(header: Text(bird.name)) {
-                                NavigationLink(destination: BirdDetail(filename: bird.filename)) {
-                                    bird.display()
-                                }
-                            }
-                        }
-                    }
                 }
                     Spacer()
             }
