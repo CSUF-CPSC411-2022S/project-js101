@@ -15,21 +15,12 @@
 		7AA0754D27C70FAB0008F8BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AA0754C27C70FAB0008F8BE /* Assets.xcassets */; };
 		7AA0755027C70FAB0008F8BE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AA0754F27C70FAB0008F8BE /* Preview Assets.xcassets */; };
 		7AA0755A27C70FAB0008F8BE /* BirdSpotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA0755927C70FAB0008F8BE /* BirdSpotTests.swift */; };
-		7AA0756427C70FAB0008F8BE /* BirdSpotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA0756327C70FAB0008F8BE /* BirdSpotUITests.swift */; };
-		7AA0756627C70FAB0008F8BE /* BirdSpotUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA0756527C70FAB0008F8BE /* BirdSpotUITestsLaunchTests.swift */; };
 		7AA0757A27D6CB3E0008F8BE /* buttonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA0757927D6CB3E0008F8BE /* buttonFunctions.swift */; };
 		7AF0055227EC5A5D00C58875 /* ColorPaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF0055127EC5A5D00C58875 /* ColorPaletteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		7AA0755627C70FAB0008F8BE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7AA0753D27C70FA40008F8BE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7AA0754427C70FA40008F8BE;
-			remoteInfo = BirdSpot;
-		};
-		7AA0756027C70FAB0008F8BE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7AA0753D27C70FA40008F8BE /* Project object */;
 			proxyType = 1;
@@ -49,9 +40,6 @@
 		7AA0754F27C70FAB0008F8BE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7AA0755527C70FAB0008F8BE /* BirdSpotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BirdSpotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AA0755927C70FAB0008F8BE /* BirdSpotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdSpotTests.swift; sourceTree = "<group>"; };
-		7AA0755F27C70FAB0008F8BE /* BirdSpotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BirdSpotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7AA0756327C70FAB0008F8BE /* BirdSpotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdSpotUITests.swift; sourceTree = "<group>"; };
-		7AA0756527C70FAB0008F8BE /* BirdSpotUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdSpotUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7AA0757227C713E20008F8BE /* .gitignore.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = .gitignore.md; sourceTree = "<group>"; };
 		7AA0757927D6CB3E0008F8BE /* buttonFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonFunctions.swift; sourceTree = "<group>"; };
 		7AF0055127EC5A5D00C58875 /* ColorPaletteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPaletteView.swift; sourceTree = "<group>"; };
@@ -72,13 +60,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7AA0755C27C70FAB0008F8BE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -89,7 +70,6 @@
 				7AA0757227C713E20008F8BE /* .gitignore.md */,
 				7AA0754727C70FA40008F8BE /* BirdSpot */,
 				7AA0755827C70FAB0008F8BE /* BirdSpotTests */,
-				7AA0756227C70FAB0008F8BE /* BirdSpotUITests */,
 				7AA0754627C70FA40008F8BE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,7 +79,6 @@
 			children = (
 				7AA0754527C70FA40008F8BE /* BirdSpot.app */,
 				7AA0755527C70FAB0008F8BE /* BirdSpotTests.xctest */,
-				7AA0755F27C70FAB0008F8BE /* BirdSpotUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,15 +113,6 @@
 				7AA0755927C70FAB0008F8BE /* BirdSpotTests.swift */,
 			);
 			path = BirdSpotTests;
-			sourceTree = "<group>";
-		};
-		7AA0756227C70FAB0008F8BE /* BirdSpotUITests */ = {
-			isa = PBXGroup;
-			children = (
-				7AA0756327C70FAB0008F8BE /* BirdSpotUITests.swift */,
-				7AA0756527C70FAB0008F8BE /* BirdSpotUITestsLaunchTests.swift */,
-			);
-			path = BirdSpotUITests;
 			sourceTree = "<group>";
 		};
 		7AD22DDC27D9BEDF00CA13F0 /* Packages */ = {
@@ -190,24 +160,6 @@
 			productReference = 7AA0755527C70FAB0008F8BE /* BirdSpotTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		7AA0755E27C70FAB0008F8BE /* BirdSpotUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7AA0756F27C70FAB0008F8BE /* Build configuration list for PBXNativeTarget "BirdSpotUITests" */;
-			buildPhases = (
-				7AA0755B27C70FAB0008F8BE /* Sources */,
-				7AA0755C27C70FAB0008F8BE /* Frameworks */,
-				7AA0755D27C70FAB0008F8BE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7AA0756127C70FAB0008F8BE /* PBXTargetDependency */,
-			);
-			name = BirdSpotUITests;
-			productName = BirdSpotUITests;
-			productReference = 7AA0755F27C70FAB0008F8BE /* BirdSpotUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -222,10 +174,6 @@
 						CreatedOnToolsVersion = 13.2.1;
 					};
 					7AA0755427C70FAB0008F8BE = {
-						CreatedOnToolsVersion = 13.2.1;
-						TestTargetID = 7AA0754427C70FA40008F8BE;
-					};
-					7AA0755E27C70FAB0008F8BE = {
 						CreatedOnToolsVersion = 13.2.1;
 						TestTargetID = 7AA0754427C70FA40008F8BE;
 					};
@@ -246,7 +194,6 @@
 			targets = (
 				7AA0754427C70FA40008F8BE /* BirdSpot */,
 				7AA0755427C70FAB0008F8BE /* BirdSpotTests */,
-				7AA0755E27C70FAB0008F8BE /* BirdSpotUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -262,13 +209,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		7AA0755327C70FAB0008F8BE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7AA0755D27C70FAB0008F8BE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -300,15 +240,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7AA0755B27C70FAB0008F8BE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7AA0756627C70FAB0008F8BE /* BirdSpotUITestsLaunchTests.swift in Sources */,
-				7AA0756427C70FAB0008F8BE /* BirdSpotUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -316,11 +247,6 @@
 			isa = PBXTargetDependency;
 			target = 7AA0754427C70FA40008F8BE /* BirdSpot */;
 			targetProxy = 7AA0755627C70FAB0008F8BE /* PBXContainerItemProxy */;
-		};
-		7AA0756127C70FAB0008F8BE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7AA0754427C70FA40008F8BE /* BirdSpot */;
-			targetProxy = 7AA0756027C70FAB0008F8BE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -539,42 +465,6 @@
 			};
 			name = Release;
 		};
-		7AA0757027C70FAB0008F8BE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4X95VWYYP3;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = CSUF.BirdSpotUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = BirdSpot;
-			};
-			name = Debug;
-		};
-		7AA0757127C70FAB0008F8BE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4X95VWYYP3;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = CSUF.BirdSpotUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = BirdSpot;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -601,15 +491,6 @@
 			buildConfigurations = (
 				7AA0756D27C70FAB0008F8BE /* Debug */,
 				7AA0756E27C70FAB0008F8BE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7AA0756F27C70FAB0008F8BE /* Build configuration list for PBXNativeTarget "BirdSpotUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7AA0757027C70FAB0008F8BE /* Debug */,
-				7AA0757127C70FAB0008F8BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
