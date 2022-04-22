@@ -82,12 +82,12 @@ struct HomeScreen: View {
             VStack(spacing: 0){
                 MenuBar(name: $viewName, color: $titleColor , isMainMenu: $ismainmenu)
                 NavigationView {
-//                    NavigationLink(destination: ColorPaletteView()){
-//                        Text("Search")
-//                    }
-                    NavigationLink(destination: InformationView()) {
-                        Text("Open Information View")
+                    NavigationLink(destination: ColorPaletteView()){
+                        Text("Search")
                     }
+//                    NavigationLink(destination: InformationView()) {
+//                        Text("Open Information View")
+//                    }
                 }.hiddenNavBarStyle()
 
             }
@@ -114,12 +114,25 @@ struct InformationView: View {
     @State var viewName = "Information View"
     @State var titleColor = (backColor: Color.pink, textColor: Color.black)
     @State var ismainmenu = false
+    var filter: String = ""
     var body: some View {
         GeometryReader { geometry in
                 VStack(spacing: 0) {
                     MenuBar(name: $viewName, color: $titleColor , isMainMenu: $ismainmenu)
                     Text("The information page will have birds to browse and read information about")
                     List {
+                    if(filter != "") {
+                        ForEach(data.birds) {
+                            bird in
+                            if(bird.color == filter) {
+                                Section(header: Text(bird.name)) {
+                                    NavigationLink(destination: BirdDetail(filename: bird.filename)) {
+                                        bird.display()
+                                    }
+                                }
+                            }
+                        }
+                    } else {
                         ForEach(data.birds) {
                             bird in
                             Section(header: Text(bird.name)) {
@@ -129,6 +142,7 @@ struct InformationView: View {
                             }
                         }
                     }
+                }
                     Spacer()
             }
         }
