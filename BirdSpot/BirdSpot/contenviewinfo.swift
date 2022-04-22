@@ -202,3 +202,51 @@ struct ScarletMacaw: View {
         }
     }
 }
+struct grayhawk: View {
+    var basicinfo: String = "Kingdom: Animalia \nPhylum: Chordata \nClass: Aves \nOrder: Accipitriformes \nFamily: Accipitridae \nGenus: Buteo \nSpecies: A. plagiatus"
+    var body: some View{
+        VStack{
+            Image("grayhawk")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 150.0, height: 90.0, alignment: .center)
+                .border(Color.gray, width: 2.0)
+                .clipped()
+            Text("Gray Hawk")
+            Text(basicinfo)
+            List{
+            NavigationLink(destination: Moreimages()){
+                Text("For more images of Gray Hawk")
+            }
+            NavigationLink(destination: Moreinformation()){
+                Text("For more information of Gray Hawk")
+            }
+            }
+            
+        }
+    }
+}
+struct greatgrayowl: View {
+    var basicinfo: String = "Kingdom: Animalia \nPhylum: Chordata \nClass: Aves \nOrder: Strigiformes \nFamily: Strigidae \nGenus: Strix \nSpecies: S. nebuiosa"
+    var body: some View{
+        VStack{
+            Image("greatgrayowl")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 150.0, height: 90.0, alignment: .center)
+                .border(Color.gray, width: 2.0)
+                .clipped()
+            Text("Great Gray Owl")
+            Text(basicinfo)
+            List{
+            NavigationLink(destination: Moreimages()){
+                Text("For more images of Great Gray Owl")
+            }
+            NavigationLink(destination: Moreinformation()){
+                Text("For more information of Great Gray Owl")
+            }
+            }
+            
+        }
+    }
+}

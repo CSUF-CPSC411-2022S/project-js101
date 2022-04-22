@@ -186,7 +186,26 @@ struct InformationView: View {
                             }
                         
                         }
-                    }
+						Section(header: Text("Gray Hawk")) {
+                            NavigationLink(destination: grayhawk()) {
+                                Image("grayhawk")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .clipped()
+                            }
+                        
+                        }
+                        Section(header: Text("Great Gray Owl")) {
+                            NavigationLink(destination: greatgrayowl()) {
+                                Image("greatgrayowl")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .clipped()
+                            }
+                        
+                        }
+					
+					}
 
                     Spacer()
             }
