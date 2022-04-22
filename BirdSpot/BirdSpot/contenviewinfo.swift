@@ -82,3 +82,123 @@ struct NorthernCardinal: View {
         }
     }
 }
+struct AmericanCrow: View {
+    var basicinfo: String = "Kingdom: Animalia \nPhylum: Chordata \nClass: Aves \nOrder: Passeriformes \nFamily: Covirdae \nGenus: Corvus \nSpecies: C. brachyrhynchos"
+    var body: some View{
+        VStack{
+            Image("crow")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 150.0, height: 90.0, alignment: .center)
+                .border(Color.gray, width: 2.0)
+                .clipped()
+            Text("American Crow")
+            Text(basicinfo)
+            List{
+            NavigationLink(destination: Moreimages()){
+                Text("For more images of American Crow")
+            }
+            NavigationLink(destination: Moreinformation()){
+                Text("For more information of American Crow")
+            }
+            }
+            
+        }
+    }
+}
+struct Crane: View {
+    var basicinfo: String = "Kingdom: Animalia \nPhylum: Chordata \nClass: Aves \nOrder: Gruiformes \nFamily: Gruoidae \nGenus: Grus \nSpecies: C. Vigors"
+    var body: some View{
+        VStack{
+            Image("crane")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 150.0, height: 90.0, alignment: .center)
+                .border(Color.gray, width: 2.0)
+                .clipped()
+            Text("Crane")
+            Text(basicinfo)
+            List{
+            NavigationLink(destination: Moreimages()){
+                Text("For more images of Crane")
+            }
+            NavigationLink(destination: Moreinformation()){
+                Text("For more information of Crane")
+            }
+            }
+            
+        }
+    }
+}
+struct Pelican: View {
+    var basicinfo: String = "Kingdom: Animalia \nPhylum: Chordata \nClass: Aves \nOrder: Pelecaniformes \nFamily: Pelicanidae \nGenus: Pelecanus \nSpecies: C. Pelecanus Linnaeus"
+    var body: some View{
+        VStack{
+            Image("pelican")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 150.0, height: 90.0, alignment: .center)
+                .border(Color.gray, width: 2.0)
+                .clipped()
+            Text("Crane")
+            Text(basicinfo)
+            List{
+            NavigationLink(destination: Moreimages()){
+                Text("For more images of Pelican")
+            }
+            NavigationLink(destination: Moreinformation()){
+                Text("For more information of Pelican")
+            }
+            }
+            
+        }
+    }
+}
+struct MountainBlueBird: View {
+    var basicinfo: String = "Kingdom: Animalia \nPhylum: Chordata \nClass: Aves \nOrder: Passeriformes \nFamily: Turdidae \nGenus: Sialia \nSpecies: C. currucoldes"
+    var body: some View{
+        VStack{
+            Image("bluebird")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 150.0, height: 90.0, alignment: .center)
+                .border(Color.gray, width: 2.0)
+                .clipped()
+            Text("Mountain BlueBird")
+            Text(basicinfo)
+            List{
+            NavigationLink(destination: Moreimages()){
+                Text("For more images of Mountain BlueBird")
+            }
+            NavigationLink(destination: Moreinformation()){
+                Text("For more information of Mountain BlueBird")
+            }
+            }
+            
+        }
+    }
+}
+struct ScarletMacaw: View {
+    var basicinfo: String = "Kingdom: Animalia \nPhylum: Chordata \nClass: Aves \nOrder: Psittaciformes \nFamily: Psittacidae \nGenus: Ara \nSpecies: A. Macao"
+    var body: some View{
+        VStack{
+            Image("scarletmacaw")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 150.0, height: 90.0, alignment: .center)
+                .border(Color.gray, width: 2.0)
+                .clipped()
+            Text("Scarlet Macaw")
+            Text(basicinfo)
+            List{
+            NavigationLink(destination: Moreimages()){
+                Text("For more images of Scarlet Macaw")
+            }
+            NavigationLink(destination: Moreinformation()){
+                Text("For more information of Scarlet Macaw")
+            }
+            }
+            
+        }
+    }
+}

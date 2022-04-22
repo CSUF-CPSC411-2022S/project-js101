@@ -141,6 +141,51 @@ struct InformationView: View {
                                     .clipped()
                             }
                         }
+                        Section(header: Text("American Crow")) {
+                            NavigationLink(destination: AmericanCrow()) {
+                                Image("crow")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .clipped()
+                            }
+                        
+                        }
+                        Section(header: Text("Crane")) {
+                            NavigationLink(destination: Crane()) {
+                                Image("crane")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .clipped()
+                            }
+                        
+                        }
+                        Section(header: Text("Pelican")) {
+                            NavigationLink(destination: Pelican()) {
+                                Image("pelican")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .clipped()
+                            }
+                        
+                        }
+                        Section(header: Text("Mountain BlueBird")) {
+                            NavigationLink(destination: MountainBlueBird()) {
+                                Image("bluebird")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .clipped()
+                            }
+                        
+                        }
+                        Section(header: Text("Scarlet Macaw")) {
+                            NavigationLink(destination: ScarletMacaw()) {
+                                Image("scarletmacaw")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .clipped()
+                            }
+                        
+                        }
                     }
 
                     Spacer()
@@ -163,3 +208,5 @@ extension View {
         modifier(hideNavBar())
     }
 }
+
+
