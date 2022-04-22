@@ -7,8 +7,20 @@
 
 import Foundation
 
-import Foundation
-struct TaskEntry: Codable  {
+struct birdData: Codable {
     let id: Int
-    let title: String
+    let name: String
+    let color: String
+    let sciName: String
+    let description: String
+    let images: [String]
+    let infolinks: [String]
+}
+
+class birdCollection: ObservableObject {
+    @Published var birdlist: [birdData]
+    
+    init(data: [birdData]) {
+        birdlist = data
+    }
 }
