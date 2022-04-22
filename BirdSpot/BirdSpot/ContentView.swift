@@ -14,6 +14,7 @@ struct MenuBar: View {
     @Binding var color: (backColor: Color, textColor: Color)
     @Binding var isMainMenu: Bool
     
+    
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
     var body: some View {
@@ -74,6 +75,7 @@ struct HomeScreen: View {
     @State var viewName = "Birdspot"
     @State var titleColor = (backColor: Color.gray, textColor: Color.white)
     @State var ismainmenu = true
+    
     var body: some View {
         GeometryReader { geometrey in
             VStack(spacing: 0){
@@ -86,6 +88,7 @@ struct HomeScreen: View {
             }
         }
     }
+
 }
 
 struct ContentView: View {
@@ -93,6 +96,8 @@ struct ContentView: View {
         HomeScreen()
     }
 }
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
