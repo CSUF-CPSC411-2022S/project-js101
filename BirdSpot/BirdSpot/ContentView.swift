@@ -152,7 +152,7 @@ struct InformationView: View {
                         }
                         Section(header: Text("Crane")) {
                             NavigationLink(destination: Crane()) {
-                                Image("crane")
+                                Image("Crane")
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
                                     .clipped()
@@ -161,7 +161,7 @@ struct InformationView: View {
                         }
                         Section(header: Text("Pelican")) {
                             NavigationLink(destination: Pelican()) {
-                                Image("pelican")
+                                Image("Pelican")
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
                                     .clipped()
@@ -170,7 +170,7 @@ struct InformationView: View {
                         }
                         Section(header: Text("Mountain BlueBird")) {
                             NavigationLink(destination: MountainBlueBird()) {
-                                Image("bluebird")
+                                Image("blueBird")
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
                                     .clipped()

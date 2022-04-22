@@ -110,7 +110,7 @@ struct Crane: View {
     var basicinfo: String = "Kingdom: Animalia \nPhylum: Chordata \nClass: Aves \nOrder: Gruiformes \nFamily: Gruoidae \nGenus: Grus \nSpecies: C. Vigors"
     var body: some View{
         VStack{
-            Image("crane")
+            Image("Crane")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 150.0, height: 90.0, alignment: .center)
@@ -134,7 +134,7 @@ struct Pelican: View {
     var basicinfo: String = "Kingdom: Animalia \nPhylum: Chordata \nClass: Aves \nOrder: Pelecaniformes \nFamily: Pelicanidae \nGenus: Pelecanus \nSpecies: C. Pelecanus Linnaeus"
     var body: some View{
         VStack{
-            Image("pelican")
+            Image("Pelican")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 150.0, height: 90.0, alignment: .center)
@@ -158,7 +158,7 @@ struct MountainBlueBird: View {
     var basicinfo: String = "Kingdom: Animalia \nPhylum: Chordata \nClass: Aves \nOrder: Passeriformes \nFamily: Turdidae \nGenus: Sialia \nSpecies: C. currucoldes"
     var body: some View{
         VStack{
-            Image("bluebird")
+            Image("blueBird")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 150.0, height: 90.0, alignment: .center)
