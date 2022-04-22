@@ -5,15 +5,15 @@
   <h3>  Bird Spot App</h3>
  
 
-Project roles :
+Project CHeckin5 Tasks:  
 
-Abhianv Arora - Bird Selection View
+Abhianv Arora - Updated, added, and displayed wider selecyion of words, Updtaed Documentation.
 
-Vishvesh Dumbre - Bird information View
+Vishvesh Dumbre - API Integration, Handling JSON Data
 
-Chukwudi Ikem - Color Palette View
+Chukwudi Ikem - Matching BirdVIew with the color palette (color of the birds).
 
-Jeffrey Martz - Menu View
+Jeffrey Martz - API INtegration, JSON FIle Creation.
 
   <h3> How to run </h3>
   
