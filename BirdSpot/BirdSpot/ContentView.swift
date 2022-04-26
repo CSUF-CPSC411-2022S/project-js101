@@ -96,7 +96,7 @@ struct HomeScreen: View {
 }
 
 struct ContentView: View {
-    @StateObject var birds = DefaultBirds()
+    @StateObject var birds = birdCollection()
     var body: some View {
         HomeScreen()
         .environmentObject(birds)
@@ -110,7 +110,7 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 struct InformationView: View {
-    @EnvironmentObject var data: DefaultBirds
+    @EnvironmentObject var data: birdCollection
     @State var viewName = "Information View"
     @State var titleColor = (backColor: Color.pink, textColor: Color.black)
     @State var ismainmenu = false
@@ -126,9 +126,12 @@ struct InformationView: View {
                                 bird in
                                 if(bird.color == filter) {
                                     Section(header: Text(bird.name)) {
-                                        NavigationLink(destination: BirdDetail(filename: bird.filename)) {
-                                            bird.display()
-                                        }
+                                        NavigationLink(destination: BirdView(bird: bird)) {
+                                            AsyncImage(url: URL(string: bird.images[0])){ image in
+                                                image.resizable()
+                                            } placeholder: {
+                                                ProgressView()
+                                            }.frame(width:200, height: 120)                                        }
                                     }
                                 }
                             }
@@ -136,8 +139,8 @@ struct InformationView: View {
                             ForEach(data.birds) {
                                 bird in
                                 Section(header: Text(bird.name)) {
-                                    NavigationLink(destination: BirdDetail(filename: bird.filename)) {
-                                        bird.display()
+                                    NavigationLink(destination: BirdView(bird: bird)) {
+                                        Text(bird.name)
                                     }
                                 }
                             }
