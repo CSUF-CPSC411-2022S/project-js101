@@ -10,15 +10,24 @@ import SwiftUI
 
 
 struct MenuBar: View {
-    @Binding var name: String
-    @Binding var color: (backColor: Color, textColor: Color)
-    @Binding var isMainMenu: Bool
+    var name: String
+    var color: (backColor: Color, textColor: Color)
+    var isMainMenu: Bool
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
     var body: some View {
         GeometryReader { geometry in
                 HStack {
+                    if isMainMenu != true {
+                       Button(action: {
+                           self.mode.wrappedValue.dismiss()
+                       }) {
+                           Image(systemName: "arrowshape.turn.up.left")
+                               .foregroundColor(color.textColor)
+                               .padding(.trailing, 10)
+                       }
+                    }
                     Text(name).foregroundColor(color.textColor).bold()
                     Spacer()
                     if isMainMenu == true {
@@ -26,23 +35,15 @@ struct MenuBar: View {
                             Text("Settings")
                             Button("Location",action: openLocationMenu)
                             Button("Language",action: changeLanguage)
-                            Button("Color Blind Mode", action: toggleColorBlindMode)
+                            Button("Dark Mode", action: toggleDarkMode)
                         } label: {
                             Image(systemName: "line.3.horizontal")
                                 .foregroundColor(color.textColor)
                                 .padding(.trailing, 10)
                         }
-                    } else {
-                        Button(action: {
-                            self.mode.wrappedValue.dismiss()
-                        }) {
-                            Image(systemName: "arrowshape.turn.up.left")
-                                .foregroundColor(color.textColor)
-                                .padding(.trailing, 10)
-                        }
                     }
                 }
-                    .modifier(menuModifier(menuColor: $color, isMM: $isMainMenu))
+                    .modifier(menuModifier(menuColor: color, isMM: isMainMenu))
                     .frame(width:geometry.size.width)
         }
             .frame(height: 60)
@@ -53,8 +54,8 @@ struct MenuBar: View {
 
 
 struct menuModifier: ViewModifier {
-    @Binding var menuColor: (backColor: Color, textColor: Color)
-    @Binding var isMM: Bool
+    var menuColor: (backColor: Color, textColor: Color)
+    var isMM: Bool
     func body(content: Content) -> some View {
         if isMM {
             content
@@ -74,13 +75,12 @@ struct menuModifier: ViewModifier {
 }
 
 struct HomeScreen: View {
-    @State var viewName = "Birdspot"
-    @State var titleColor = (backColor: Color.gray, textColor: Color.white)
-    @State var ismainmenu = true
+    var viewName = "Birdspot"
+    var titleColor = (backColor: Color.gray, textColor: Color.white)
     var body: some View {
         GeometryReader { geometrey in
             VStack(spacing: 0){
-                MenuBar(name: $viewName, color: $titleColor , isMainMenu: $ismainmenu)
+                MenuBar(name: viewName, color: titleColor , isMainMenu: true)
                 NavigationView {
                     NavigationLink(destination: ColorPaletteView()){
                         Text("Search")
@@ -111,14 +111,13 @@ struct ContentView_Previews: PreviewProvider {
 
 struct InformationView: View {
     @EnvironmentObject var data: birdCollection
-    @State var viewName = "Information View"
-    @State var titleColor = (backColor: Color.pink, textColor: Color.black)
-    @State var ismainmenu = false
+    var viewName = "Information View"
+    var titleColor = (backColor: Color.pink, textColor: Color.black)
     var filter: String = ""
     var body: some View {
         GeometryReader { geometry in
                 VStack(spacing: 0) {
-                    MenuBar(name: $viewName, color: $titleColor , isMainMenu: $ismainmenu)
+                    MenuBar(name: viewName, color: titleColor , isMainMenu: false)
                     Text("The information page will have birds to browse and read information about")
                     List {
                         if(filter != "") {
