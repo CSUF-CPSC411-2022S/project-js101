@@ -7,7 +7,7 @@
 
 Project CHeckin5 Tasks:  
 
-Abhianv Arora - Updated, added, and displayed wider selecyion of words, Updtaed Documentation.
+Abhianv Arora - Updated, added, and displayed wider selecyion of words, Updtaed Documentation, and Created the JSON File from where data will be pulled.
 
 Vishvesh Dumbre - API Integration, Handling JSON Data
 
