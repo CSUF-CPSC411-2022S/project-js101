@@ -1,0 +1,284 @@
+[
+    {
+        "id": 1,
+        "name": "Bald eagle",
+        "color": "brown",
+        "sciName": "h. leucocephalus",
+        "description": "The Bald Eagle has been the national emblem of the United States since 1782 and a spiritual symbol for native people for far longer than that. These regal birds arent really bald, but their white-feathered heads gleam in contrast to their chocolate-brown body and wings. Look for them soaring in solitude, chasing other birds for their food, or gathering by the hundreds in winter. Once endangered by hunting and pesticides, Bald Eagles have flourished under protection.",
+        "images" : [
+            "https://www.allaboutbirds.org/guide/assets/photo/306062281-1280px.jpg"
+        ],
+        "infolinks": [
+            "https://en.wikipedia.org/wiki/Bald_eagle"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Blue Jay",
+        "color": "blue",
+        "sciName": "C. cristata",
+        "description": "This common, large songbird is familiar to many people, with its perky crest; blue, white, and black plumage; and noisy calls. Blue Jays are known for their intelligence and complex social systems with tight family bonds. Their fondness for acorns is credited with helping spread oak trees after the last glacial period.",
+        "images" : [
+            "https://www.allaboutbirds.org/guide/assets/photo/311635911-1280px.jpg"
+        ],
+        "infolinks": [ 
+            "https://en.wikipedia.org/wiki/Blue_jay",
+            "https://www.allaboutbirds.org/guide/Blue_Jay/overview"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Northern Cardinal",
+        "color": "red",
+        "sciName": "Cardinalis cardinalis",
+        "description": "The male Northern Cardinal is perhaps responsible for getting more people to open up a field guide than any other bird. They are a perfect combination of familiarity, conspicuousness, and style: a shade of red you cant take your eyes off. Even the brown females sport a sharp crest and warm red accents. Cardinals dont migrate and they dont molt into a dull plumage, so theyre still breathtaking in winters snowy backyards. In summer, their sweet whistles are one of the first sounds of the morning.",
+        "images" : [
+            "https://www.allaboutbirds.org/guide/assets/photo/297087301-1280px.jpg"
+        ],
+        "infolinks": [ 
+            "https://en.wikipedia.org/wiki/Northern_cardinal",
+            "https://www.allaboutbirds.org/guide/Northern_Cardinal/overview"
+        ]
+    },
+	{
+        "id": 4,
+        "name": "American Crow",
+        "color": "black",
+        "sciName": "Corvus brachyrhynchos",
+        "description": "American Crows are familiar over much of the continent: large, intelligent, all-black birds with hoarse, cawing voices. They are common sights in treetops, fields, and roadsides, and in habitats ranging from open woods and empty beaches to town centers. They usually feed on the ground and eat almost anything—typically earthworms, insects and other small animals, seeds, and fruit; also garbage, carrion, and chicks they rob from nests. Their flight style is unique, a patient, methodical flapping that is rarely broken up with glides.",
+        "images" : [
+            "https://www.nps.gov/miss/learn/nature/images/20081021-7274.jpg?maxwidth=650&autorotate=false&quality=78&format=webp",
+			"https://bloximages.newyork1.vip.townnews.com/mcdowellnews.com/content/tncms/assets/v3/editorial/b/02/b02fa064-35b1-11ec-a0a7-1fd5733aaeb4/6176dd064b3c3.image.jpg?resize=1200%2C800",
+			"https://www.allaboutbirds.org/guide/assets/photo/59858031-720px.jpg"
+        ],
+        "infolinks": [ 
+            "https://en.wikipedia.org/wiki/American_crow",
+            "https://celebrateurbanbirds.org/learn/birds/focal-species/american-crow/"
+        ]
+    },
+	{
+        "id": 5,
+        "name": "American White Pelican",
+        "color": "white",
+        "sciName": "Pelecanus erythrorhynchos",
+        "description": "One of the largest North American birds, the American White Pelican is majestic in the air. The birds soar with incredible steadiness on broad, white-and-black wings. Their large heads and huge, heavy bills give them a prehistoric look. On the water they dip their pouched bills to scoop up fish, or tip-up like an oversized dabbling duck. Sometimes, groups of pelicans work together to herd fish into the shallows for easy feeding. Look for them on inland lakes in summer and near coastlines in winter",
+        "images" : [
+            "https://www.allaboutbirds.org/guide/assets/photo/304461551-1280px.jpg",
+			"https://www.allaboutbirds.org/guide/assets/photo/70589261-1280px.jpg",
+			"https://www.allaboutbirds.org/guide/assets/photo/304461341-1280px.jpg"
+        ],
+        "infolinks": [ 
+            "https://www.audubon.org/field-guide/bird/american-white-pelican",
+            "https://en.wikipedia.org/wiki/American_white_pelican"
+        ]
+    },
+	{
+        "id": 6,
+        "name": "Sandhill White Crane",
+        "color": "white",
+        "sciName": "Antigone canadensis",
+        "description": "Whether stepping singly across a wet meadow or filling the sky by the hundreds and thousands, Sandhill Cranes have an elegance that draws attention. These tall, gray-bodied, crimson-capped birds breed in open wetlands, fields, and prairies across North America. They group together in great numbers, filling the air with distinctive rolling cries. Mates display to each other with exuberant dances that retain a gangly grace. Sandhill Crane populations are generally strong, but isolated populations in Mississippi and Cuba are endangered.",
+        "images" : [
+            "https://dickinsoncountyconservationboard.com/wp-content/uploads/sites/2/2019/04/bird-1835581_1920-1024x683.jpg",
+			"https://dickinsoncountyconservationboard.com/wp-content/uploads/sites/2/2019/04/great-white-heron-1200337_1920-1024x834.jpg",
+			"https://d2gg9evh47fn9z.cloudfront.net/1600px_COLOURBOX3594859.jpg"
+        ],
+        "infolinks": [ 
+            "https://www.allaboutbirds.org/guide/Whooping_Crane/id",
+            "https://en.wikipedia.org/wiki/White-naped_crane"
+        ]
+    },
+	{
+        "id": 7,
+        "name": "Mountain BlueBird",
+        "color": "blue",
+        "sciName": "Sialia currucoides",
+        "description": "Male Mountain Bluebirds lend a bit of cerulean sparkle to open habitats across much of western North America. You may spot these cavity-nesters flitting between perches in mountain meadows, in burned or cut-over areas, or where prairie meets forest—especially in places where people have provided nest boxes. Unlike many thrushes, Mountain Bluebirds hunt insects from perches or while on the wing, at times resembling a tiny American Kestrel with their long wings, hovering flight, and quick dives.",
+        "images" : [
+            "https://www.allaboutbirds.org/guide/assets/photo/303800251-1280px.jpg",
+			"https://www.allaboutbirds.org/guide/assets/photo/67471221-1280px.jpg",
+			"https://www.allaboutbirds.org/guide/assets/photo/67471191-1280px.jpg"
+        ],
+        "infolinks": [ 
+            "https://www.allaboutbirds.org/guide/Mountain_Bluebird/overview",
+            "https://en.wikipedia.org/wiki/Mountain_bluebird"
+        ]
+    },
+	{
+        "id": 8,
+        "name": "Scarlet Macaw",
+        "color": "red",
+        "sciName": "Ara macao",
+        "description": "Spectacular, huge, and long-tailed parrot, wiped out from most areas by capture for the pet trade; attempts at reintroduction are taking place in some protected areas. Found very locally in lowland rainforest and adjacent semiopen areas with big trees; usually in pairs. Unmistakable, bright scarlet red overall with big yellow wing patches and mostly blue wings and rump. Calls are deep, throaty roars that carry long distances. The scarlet macaves are a rare bird in the wild, but they are a common sight in the tropics and subtropics. They are also found in the southern United States, where they are known as the great tropical magic.",
+        "images" : [
+            "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/320977231/1800",
+			"https://cdn.download.ams.birds.cornell.edu/api/v1/asset/44409291/480",
+			"https://cdn.download.ams.birds.cornell.edu/api/v1/asset/44409311/480"
+        ],
+        "infolinks": [ 
+            "https://en.wikipedia.org/wiki/Scarlet_macaw",
+            "https://lafeber.com/pet-birds/species/scarlet-macaw/"
+        ]
+    },
+	{
+        "id": 9,
+        "name": "Gray Hawk",
+        "color": "gray",
+        "sciName": "Buteo plagiatus",
+        "description": "A tropical species that barely crosses the border into Arizona and Texas, the Gray Hawk is an elegant, raincloud-gray raptor with neatly barred underparts. They spend their days gracefully soaring over open areas or perched in cottonwoods, willows, and mesquites along lowland streams. They patiently watch for lizards, then catch them with a swift dart toward the ground. Gray Hawks are small for a hawk in the genus Buteo, and their longish tails and flap-and-glide flight style can make them resemble accipiters.",
+        "images" : [
+            "https://www.allaboutbirds.org/guide/assets/photo/306088001-1280px.jpg",
+			"https://www.allaboutbirds.org/guide/assets/photo/306088271-1280px.jpg",
+			"https://www.allaboutbirds.org/guide/assets/photo/306088261-1280px.jpg"
+        ],
+        "infolinks": [ 
+            "https://en.wikipedia.org/wiki/gray_hawk",
+            "https://www.audubon.org/field-guide/bird/gray-hawk"
+        ]
+    },
+	{
+        "id": 10,
+        "name": "Gray Catbird",
+        "color": "gray",
+        "sciName": "Dumetella carolinensis",
+        "description": "If youre convinced youll never be able to learn bird calls, start with the Gray Catbird. Once you have heard its catty mew you wont forget it. Follow the sound into thickets and vine tangles and youll be rewarded by a somber gray bird with a black cap and bright rusty feathers under the tail. Gray Catbirds are relatives of mockingbirds and thrashers, and they share that groups vocal abilities, copying the sounds of other species and stringing them together to make their own song.",
+        "images" : [
+            "https://www.allaboutbirds.org/guide/assets/photo/303925501-1280px.jpg",
+			"https://www.allaboutbirds.org/guide/assets/photo/303925731-1280px.jpg",
+			"https://www.allaboutbirds.org/guide/assets/photo/303926041-1280px.jpg"
+        ],
+        "infolinks": [ 
+            "https://en.wikipedia.org/wiki/gray_catbird",
+            "https://www.audubon.org/field-guide/bird/gray-catbird"
+        ]
+    },
+	{
+        "id": 11,
+        "name": "Black Swift",
+        "color": "black",
+        "sciName": "Cypseloides niger",
+        "description": "The Black Swift dances high in the sky on sickle-shaped wings, where it feasts on winged ants. On sunny days it flies so high that it's just a speck. This large, black swift nests on dark and inaccessible ledges, often behind waterfalls, but much of the rest of its life is shrouded in mystery. It spends the winter somewhere in South America and the Caribbean, where it blends in with similar-looking swifts. Sadly, one of the few things we know about this species is its U.S./Canada population has dropped by more than 90% since 1970.",
+        "images" : [
+            "https://www.allaboutbirds.org/guide/assets/photo/40635641-1280px.jpg",
+			"https://www.allaboutbirds.org/guide/assets/photo/304079521-1280px.jpg",
+			"https://www.vmcdn.ca/f/files/rmotoday/images/black-swift-120729-amar-athwal.jpg;w=960"
+        ],
+        "infolinks": [ 
+            "https://en.wikipedia.org/wiki/American_black_swift",
+            "https://www.audubon.org/magazine/september-october-2012/out-shadows-black-swifts-north"
+        ]
+    },
+	{
+        "id": 12,
+        "name": "Brown Booby",
+        "color": "brown",
+        "sciName": "Sula leucogaster",
+        "description": "Found in tropical oceans around the world, the Brown Booby is a dashing seabird—both in plumage, a natty brown-and-white (with bright yellow feet) and in flight style, which involves swift aerial maneuvers and deft dives. Brown Boobies do not nest on the United States mainland but often visit waters off Florida or California. They occasionally stray as far north as Canada, and sometimes well inland. Like most seabirds that nest on islands, Brown Boobies are very vulnerable to introduced predators such as rats, mice, and cats.",
+        "images" : [
+            "https://www.allaboutbirds.org/guide/assets/photo/304383741-1280px.jpg",
+			"https://www.allaboutbirds.org/guide/assets/photo/304383871-1280px.jpg",
+			"https://www.allaboutbirds.org/guide/assets/photo/44485781-1280px.jpg"
+        ],
+        "infolinks": [ 
+            "https://en.wikipedia.org/wiki/brown_booby",
+            "https://www.audubon.org/field-guide/bird/brown-booby"
+        ]
+    },
+	{
+        "id": 13,
+        "name": "Green Kingfisher",
+        "color": "green",
+        "sciName": "Chloroceryle americana",
+        "description": "In bright sunlight the Green Kingfisher sparkles like an emerald, but it is easy to overlook along dense, shaded streams where it forages for fish. It is a small, green-and-white kingfisher with an impressively large bill, and typically much less conspicuous than the noisy Belted Kingfisher. Females have two neat green bands across the breast; males have a contrasting rust-red chest. The Green Kingfisher barely makes it into the United States in southern Arizona and Texas, but its range extends south through South America, nearly to Patagonia.",
+        "images" : [
+            "https://www.allaboutbirds.org/guide/assets/photo/303719621-1280px.jpg",
+			"https://www.allaboutbirds.org/guide/assets/photo/303719931-1280px.jpg",
+			"https://www.allaboutbirds.org/guide/assets/photo/303719741-1280px.jpg"
+        ],
+        "infolinks": [ 
+            "https://en.wikipedia.org/wiki/green_kingfisher",
+            "https://www.audubon.org/field-guide/bird/green-kingfisher"
+        ]
+    },
+	{
+        "id": 14,
+        "name": "Green Jay",
+        "color": "green",
+        "sciName": "Cyanocorax yncas",
+        "description": "A brilliant green, yellow, and blue jay of the tropics whose range barely stretches to southern Texas, the Green Jay is a noisy, colorful delight. The birds travel in conspicuous family flocks through brushlands and forests, seeking insects, small vertebrates, and fruit to eat. Like other jays and crows, this species is an incredibly versatile forager equally comfortable at picking, gleaning, pouncing, and even flycatching. During the breeding season, from April through June, these garrulous birds settle down and become a bit quieter. They are also known to be a bit more active in the summer months, when they are more likely to be seen in the wild.",
+        "images" : [
+            "https://www.allaboutbirds.org/guide/assets/photo/40635641-1280px.jpg",
+			"https://www.allaboutbirds.org/guide/assets/photo/304079521-1280px.jpg",
+			""
+        ],
+        "infolinks": [ 
+            "https://en.wikipedia.org/wiki/green_jay",
+            "https://www.audubon.org/field-guide/bird/green-jay"
+        ]
+    },
+	{
+        "id": 15,
+        "name": "Hooded Warbler",
+        "color": "yellow",
+        "sciName": "Setophaga citrina",
+        "description": "The Hooded Warbler flits through shrubby understories in eastern forests, flicking its tail to show off its white tail feathers. But those flashes are not the only thing that will draw your attention. The male's bright yellow cheeks and forehead surrounded by a black hood and throat will surely capture you. Females lack the bold black hood, but their yellow cheeks still stand out. Listen for their characteristic song on the breeding grounds and their metallic chip on the wintering grounds in Mexico and Central America.",
+        "images" : [
+            "https://www.allaboutbirds.org/guide/assets/photo/64456451-1280px.jpg",
+			"https://www.allaboutbirds.org/guide/assets/photo/64456411-1280px.jpg",
+			"https://www.allaboutbirds.org/guide/assets/photo/297027781-1280px.jpg"
+        ],
+        "infolinks": [ 
+            "https://en.wikipedia.org/wiki/hooded_warbler",
+            "https://www.audubon.org/field-guide/bird/hooded-warbler"
+        ]
+    },
+	{
+        "id": 16,
+        "name": "Yellowthroat",
+        "color": "yellow",
+        "sciName": "Geothlypis trichas",
+        "description": "A broad black mask lends a touch of highwayman mystique to the male Common Yellowthroat. Look for these furtive, yellow-and-olive warblers skulking through tangled vegetation, often at the edges of marshes and wetlands. Females lack the mask and are much browner, though they usually show a hint of warm yellow at the throat. Yellowthroats are vocal birds, and both their witchety-witchety-witchety songs and distinctive call notes help reveal the presence of this, one of our most numerous warblers.",
+        "images" : [
+            "https://www.allaboutbirds.org/guide/assets/photo/66117591-1280px.jpg",
+			"https://www.allaboutbirds.org/guide/assets/photo/66117601-1280px.jpg",
+			"https://www.allaboutbirds.org/guide/assets/photo/297027971-1280px.jpg"
+        ],
+        "infolinks": [ 
+            "https://en.wikipedia.org/wiki/yellowthroat",
+            "https://www.allaboutbirds.org/guide/Common_Yellowthroat/id"
+        ]
+    },
+	{
+        "id": 17,
+        "name": "Purple Finch",
+        "color": "purple",
+        "sciName": "Haemorhous purpureus",
+        "description": "The Purple Finch is the bird that Roger Tory Peterson famously described as a “sparrow dipped in raspberry juice.” For many of us, they are irregular winter visitors to our feeders, although these chunky, big-beaked finches do breed in northern North America and the West Coast. Separating them from House Finches requires a careful look, but the reward is a delicately colored, cleaner version of that red finch. Look for them in forests, too, where youre likely to hear their warbling song from the highest parts of the trees..",
+        "images" : [
+            "https://www.allaboutbirds.org/guide/assets/photo/306333791-1280px.jpg",
+			"https://www.allaboutbirds.org/guide/assets/photo/306334061-1280px.jpg",
+			"https://www.allaboutbirds.org/guide/assets/photo/306334071-1280px.jpg"
+        ],
+        "infolinks": [ 
+            "https://en.wikipedia.org/wiki/purple_finch",
+            "https://www.allaboutbirds.org/guide/Purple_Finch"
+        ]
+    },
+	{
+        "id": 18,
+        "name": "Purple Martin",
+        "color": "purple",
+        "sciName": "Progne subis",
+        "description": "Putting up a Purple Martin house is like installing a miniature neighborhood in your backyard. In the East, dark, glossy-blue males and brown females will peer from the entrances and chirp from the rooftops all summer. In the West, martins mainly still nest the old-fashioned way—in woodpecker holes. Our largest swallows, Purple Martins perform aerial acrobatics to snap up flying insects. At the end of the breeding season they gather in big flocks and make their way to South America.",
+        "images" : [
+            "https://www.allaboutbirds.org/guide/assets/photo/305535681-1280px.jpg",
+			"https://www.allaboutbirds.org/guide/assets/photo/305535961-1280px.jpg",
+			"https://www.allaboutbirds.org/guide/assets/photo/305536291-1280px.jpg"
+        ],
+        "infolinks": [ 
+            "https://en.wikipedia.org/wiki/purple_martin",
+            "https://www.audubon.org/field-guide/bird/purple-martin"
+        ]
+    }
+]
+    
