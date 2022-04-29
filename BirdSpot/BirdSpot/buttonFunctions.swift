@@ -9,6 +9,6 @@ import Foundation
 
 func openLocationMenu() { }
 func changeLanguage() { }
-func toggleColorBlindMode() { }
+func toggleDarkMode() { }
 func goBack() { }
 func openPhotoView() { }
