@@ -17,6 +17,7 @@
 		7AA0755A27C70FAB0008F8BE /* BirdSpotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA0755927C70FAB0008F8BE /* BirdSpotTests.swift */; };
 		7AA0757A27D6CB3E0008F8BE /* buttonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA0757927D6CB3E0008F8BE /* buttonFunctions.swift */; };
 		7AD06F9F28188D0900EE2EFB /* birdjson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD06F9E28188D0900EE2EFB /* birdjson.swift */; };
+		7AD06FA32821E25100EE2EFB /* search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD06FA22821E25100EE2EFB /* search.swift */; };
 		7AF0055227EC5A5D00C58875 /* ColorPaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF0055127EC5A5D00C58875 /* ColorPaletteView.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		7AA0757227C713E20008F8BE /* .gitignore.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = .gitignore.md; sourceTree = "<group>"; };
 		7AA0757927D6CB3E0008F8BE /* buttonFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonFunctions.swift; sourceTree = "<group>"; };
 		7AD06F9E28188D0900EE2EFB /* birdjson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = birdjson.swift; sourceTree = "<group>"; };
+		7AD06FA22821E25100EE2EFB /* search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = search.swift; sourceTree = "<group>"; };
 		7AF0055127EC5A5D00C58875 /* ColorPaletteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPaletteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +90,7 @@
 		7AA0754727C70FA40008F8BE /* BirdSpot */ = {
 			isa = PBXGroup;
 			children = (
+				7AD06FA22821E25100EE2EFB /* search.swift */,
 				7AD06F9E28188D0900EE2EFB /* birdjson.swift */,
 				7AF0055127EC5A5D00C58875 /* ColorPaletteView.swift */,
 				7AA0757927D6CB3E0008F8BE /* buttonFunctions.swift */,
@@ -231,6 +234,7 @@
 				7AA0754927C70FA40008F8BE /* BirdSpotApp.swift in Sources */,
 				7AD06F9F28188D0900EE2EFB /* birdjson.swift in Sources */,
 				7A60937227FE5D55004858FA /* stubstruct.swift in Sources */,
+				7AD06FA32821E25100EE2EFB /* search.swift in Sources */,
 				7A0D6D3027EC24BF000C97BB /* contenviewinfo.swift in Sources */,
 				7A15FAA328127FF100953038 /* DefaultBirds.swift in Sources */,
 			);

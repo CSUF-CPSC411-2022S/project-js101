@@ -81,14 +81,7 @@ struct HomeScreen: View {
         GeometryReader { geometrey in
             VStack(spacing: 0){
                 MenuBar(name: viewName, color: titleColor , isMainMenu: true)
-                NavigationView {
-                    NavigationLink(destination: ColorPaletteView()){
-                        Text("Search")
-                    }
-//                    NavigationLink(destination: InformationView()) {
-//                        Text("Open Information View")
-//                    }
-                }.hiddenNavBarStyle()
+                ColorPaletteView()
 
             }
         }

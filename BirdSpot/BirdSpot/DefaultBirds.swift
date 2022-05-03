@@ -38,32 +38,4 @@ struct BirdImage: Identifiable {
     }
 }
 // Has no direct connection to DefaultBirds, serves as a "lookup" so that we can load different details given different arguments
-struct BirdDetail: View {
-    var filename: String
-    var body: some View {
-        switch filename {
-            case "BaldEagle":
-                BaldEagle()
-            case "BlueJay":
-                BlueJay()
-            case "NorthernCardinal":
-                NorthernCardinal()
-            case "AmericanCrow":
-                AmericanCrow()
-            case "Crane":
-                Crane()
-            case "Pelican":
-                Pelican()
-            case "MountainBlueBird":
-                MountainBlueBird()
-            case "ScarletMacaw":
-                ScarletMacaw()
-            case "GrayHawk":
-                GrayHawk()
-            case "GreatGrayOwl":
-                GreatGrayOwl()
-            default:
-                GreatGrayOwl()
-        }
-    }
-}
+
