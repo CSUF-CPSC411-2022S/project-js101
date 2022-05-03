@@ -127,10 +127,12 @@ struct InformationView: View {
                                     Section(header: Text(bird.name)) {
                                         NavigationLink(destination: BirdView(bird: bird)) {
                                             AsyncImage(url: URL(string: bird.images[0])){ image in
-                                                image.resizable()
+                                                image.resizable().aspectRatio(contentMode: .fill)
+                                                    .clipped()
+                                                    .frame(width: 200, height: 200, alignment: .center)
                                             } placeholder: {
                                                 ProgressView()
-                                            }.frame(width:200, height: 120)                                        }
+                                            }.frame(width:250, height: 250)                                        }
                                     }
                                 }
                             }
