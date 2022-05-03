@@ -10,8 +10,10 @@ import SwiftUI
 
 
 struct ColorPaletteView: View {
-    @State var color: String = ""
-    
+    @EnvironmentObject var data: birdCollection
+    @State private var color: String = ""
+    @State var results: [birdData] = []
+
     var body: some View {
         GeometryReader { geometry in
             NavigationView {
@@ -38,13 +40,14 @@ struct ColorPaletteView: View {
                     HStack {
                         Image("search-icon")
                             .resizable().scaledToFit()
-                        TextField(text: $color, prompt: Text("search")) {
-                            
-                        }
+                        TextField("search", text: $color)
+                            .onSubmit {
+                            }
+
                     }.padding(6)
                         .overlay(RoundedRectangle(cornerRadius: 15).stroke(Color.black, lineWidth: 2))
                         .frame(width: geometry.size.width * 0.90, height: geometry.size.height * 0.05)
-                    
+                        
                     // Vstack for the colors! TODO: make the individual circles naviagtion links
                     VStack {
                         HStack {

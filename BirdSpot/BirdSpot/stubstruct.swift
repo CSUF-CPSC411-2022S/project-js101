@@ -12,7 +12,6 @@ struct Moreimages: View {
     var body: some View{
         GeometryReader { geometry in
                 VStack(spacing: 0) {
-                   
                     Text("This page will retrieve more images of the bird selected from stubs")
                 }
         }
@@ -23,7 +22,6 @@ struct Moreinformation: View {
     var body: some View{
         GeometryReader { geometry in
                 VStack(spacing: 0) {
-                  
                     Text("This page will retrieve more images of the bird selected from stubs")
                 }
         }
