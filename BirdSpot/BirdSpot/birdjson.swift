@@ -28,7 +28,7 @@ struct birdData: Codable, Identifiable {
 
 class birdCollection: ObservableObject {
     @Published var birds: [birdData] = []
-
+    
     init(){
         loadData()
     }
@@ -59,34 +59,3 @@ class birdCollection: ObservableObject {
 }
 
 
-class testingBirdCollection {
-    var birds: [birdData] = []
-
-    init(){
-        loadData()
-    }
-    
-    func loadData() {
-            guard let url = URL(string: "https://jjfromwa.github.io/Data/birds.json") else {
-                print("Your API end point is Invalid")
-                return
-            }
-            let request = URLRequest(url: url)
-
-            URLSession.shared.dataTask(with: request) { data, response, error in
-                if let data = data {
-                  if let response = try? JSONDecoder().decode([birdData].self, from: data) {
-                        DispatchQueue.main.async {
-                            self.birds = response
-                        }
-                        return
-                    }
-                }
-            }.resume()
-    }
-    
-    func clear() {
-        birds = []
-    }
-    
-}
