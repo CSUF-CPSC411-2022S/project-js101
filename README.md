@@ -5,15 +5,15 @@
   <h3>  Bird Spot App</h3>
  
 
-Project CHeckin5 Tasks:  
+Project Checkin 5 Tasks:  
 
-Abhianv Arora - Updated, added, and displayed wider selecyion of words, Updtaed Documentation, and Created the JSON File from where data will be pulled.
+Abhianv Arora - Updated, added, and displayed wider selection of words, Updtaed Documentation, and Created the JSON File from where data will be pulled.
 
-Vishvesh Dumbre - API Integration, Handling JSON Data
+Vishvesh Dumbre - API Integration, Handling JSON Data.
 
-Chukwudi Ikem - Matching BirdVIew with the color palette (color of the birds).
+Chukwudi Ikem - Matching BirdVIew with the color palette (color of the birds), Added Search Functionality
 
-Jeffrey Martz - API INtegration, JSON FIle Creation.
+Jeffrey Martz - API Integration, JSON FIle Creation.
 
   <h3> How to run </h3>
   
