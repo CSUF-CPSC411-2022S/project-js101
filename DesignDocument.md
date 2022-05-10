@@ -13,7 +13,7 @@ Our Motivation behind the application was to create a one-stop consumer experien
 
 ### Summary
 
-Our application allows the user to access Information regarding various birds, and also allows the user to filter birds based on their color, and also allows the user to search pictures of various birds.
+Our application allows the user to access Information regarding various birds, and also allows the user to filter birds based on their color, and also allows the user to search information, and pictures of various birds.
 
 ## Features
 
