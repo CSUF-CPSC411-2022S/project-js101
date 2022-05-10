@@ -7,7 +7,7 @@
 
 Project Checkin 5 Tasks:  
 
-Abhianv Arora - Updated, added, and displayed wider selection of words, Updtaed Documentation, and Created the JSON File from where data will be pulled.
+Abhianv Arora - Updated, added, and displayed wider selection of birds, Updated Documentation, Created, and Populated the JSON File from where data will be pulled.
 
 Vishvesh Dumbre - API Integration, Handling JSON Data.
 
