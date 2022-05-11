@@ -12,13 +12,13 @@ struct BirdView: View {
     var bird: birdData
     var body: some View{
         VStack{
-            Text(bird.name)
+            Text(bird.name).font(.largeTitle)
             AsyncImage(url: URL(string: bird.images[0])){ image in
                 image.resizable()
             } placeholder: {
                 ProgressView()
             }.frame(width:300, height: 180)
-            Text(bird.description)
+            Text(bird.description).padding()
             List{
                 NavigationLink(destination: Moreimages(bird: bird)){
                 Text("For more images of \(bird.name)")

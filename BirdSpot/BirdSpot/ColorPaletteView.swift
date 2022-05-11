@@ -19,7 +19,7 @@ struct ColorPaletteView: View {
                     // creating horizontal stacks so welcome and select messages can be left justified.
                     HStack {
                         Text("Welcome!")
-                            .font(.headline)
+                            .font(.largeTitle)
                             .padding()
                         Spacer()
                     }
@@ -46,6 +46,7 @@ struct ColorPaletteView: View {
                         .frame(width: geometry.size.width * 0.90, height: geometry.size.height * 0.05)
                     
                     // Vstack for the colors! TODO: make the individual circles naviagtion links
+                    Spacer()
                     VStack {
                         HStack {
                             Spacer()
@@ -94,8 +95,9 @@ struct ColorPaletteView: View {
                             }
                             Spacer()
                         }.padding()
+                    
                     }
-                
+                    Spacer()
                 }
             }
     }
