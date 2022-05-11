@@ -33,6 +33,6 @@ struct Settings :View {
             }.pickerStyle(SegmentedPickerStyle())
                 .padding()
             
-        }.environment(\.colorScheme, isDarkMode ? .dark :.light)
+        }
     }
 }

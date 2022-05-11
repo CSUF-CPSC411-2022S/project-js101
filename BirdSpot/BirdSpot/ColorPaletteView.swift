@@ -14,7 +14,6 @@ struct ColorPaletteView: View {
     
     var body: some View {
         GeometryReader { geometry in
-            NavigationView {
                 // This Vstack acts as a container for the entire page
                 VStack {
                     // creating horizontal stacks so welcome and select messages can be left justified.
@@ -24,7 +23,7 @@ struct ColorPaletteView: View {
                             .padding()
                         Spacer()
                     }
-                    
+                    Spacer().frame(height: 100)
                     HStack {
                         Text("Select a color or search to start.")
                             .fontWeight(.medium)
@@ -32,6 +31,7 @@ struct ColorPaletteView: View {
                             .padding()
                         Spacer()
                     }
+                    
                     
                     // TODO: run tests to ensure working textfield
                     // Hstack creates textfield with search icon.
@@ -98,7 +98,6 @@ struct ColorPaletteView: View {
                 
                 }
             }
-        }.hiddenNavBarStyle()
     }
 }
 
