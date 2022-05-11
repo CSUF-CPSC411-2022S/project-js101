@@ -7,13 +7,30 @@
 
 
 import SwiftUI
+import UIKit
+import MapKit
+import CoreLocation
+
+class ViewController: UIViewController, CLLocationManagerDelegate {
+    let locationManager = CLLocationManager()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        locationManager.requestAlwaysAuthorization()
+        locationManager.requestWhenInUseAuthorization()
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
+    }
+}
 
 
 struct MenuBar: View {
     var name: String
     var color: (backColor: Color, textColor: Color)
     var isMainMenu: Bool
-    
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
     var body: some View {
@@ -32,12 +49,12 @@ struct MenuBar: View {
                     Spacer()
                     if isMainMenu == true {
                         Menu {
-                            Text("Settings")
+                            Text("Filters")
                             Button("Location",action: openLocationMenu)
-                            Button("Language",action: changeLanguage)
-                            Button("Dark Mode", action: toggleDarkMode)
+                           // Button("Language",action: changeLanguage)
+                            //Button("Dark Mode", action: toggleDarkMode)
                         } label: {
-                            Image(systemName: "line.3.horizontal")
+                         Image(systemName: "line.3.horizontal")
                                 .foregroundColor(color.textColor)
                                 .padding(.trailing, 10)
                         }
@@ -79,7 +96,13 @@ struct HomeScreen: View {
     var titleColor = (backColor: Color.gray, textColor: Color.white)
     var body: some View {
         GeometryReader { geometrey in
-            VStack(spacing: 0){
+            VStack{
+                    HStack {
+                        Spacer()
+                        NavigationLink(destination:Settings()) {
+                            Text("⚙️ Settings")
+                        }
+                    }
                 MenuBar(name: viewName, color: titleColor , isMainMenu: true)
                 ColorPaletteView()
 
@@ -111,7 +134,7 @@ struct InformationView: View {
         GeometryReader { geometry in
                 VStack(spacing: 0) {
                     MenuBar(name: viewName, color: titleColor , isMainMenu: false)
-                    Text("The information page will have birds to browse and read information about")
+                    //Text("The information page will have birds to browse and read information about")
                     List {
                         if(filter != "") {
                             ForEach(data.birds) {
