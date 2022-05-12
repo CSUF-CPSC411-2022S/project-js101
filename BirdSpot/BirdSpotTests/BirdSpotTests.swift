@@ -39,10 +39,27 @@ class BirdSpotTests: XCTestCase {
         let target = "hello"
         XCTAssertFalse(stringSearch(searchable: STR, target: target))
     }
-    
+	func BirdsDisplay() {
+        let STR = "Birds Displayed"
+        let target = "Birds"
+        XCTAssertFalse(stringSearch(searchable: STR, target: target))
+    }
+	struct ContentViewModel {
+    let users: [String]
 
-    
-    
-    
+    var hasUsers: Bool {
+        return !Birds.isEmpty
+    }
+}
+
+//A test case to validate our logic inside the `ContentView`.
+final class ContentViewModelTests: XCTestCase {
+
+    // It should correctly reflect whether it has users.
+    func testHasUsers() {
+        let viewModel = UsersViewModel(users: ["Blue Jay", "Bald Eagle", "Northern Cardinal", "American Crow", NSLocalizedString("American Robin", comment: ""), "American Woodcock", "Common Raven", NSLocalizedString("Gray Hawk", comment: ""), "Scarlet Macaw", "Mountain BlueBird"])
+        XCTAssertTrue(viewModel.hasUsers)
+    }
+}
     
 }
