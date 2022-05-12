@@ -13,6 +13,7 @@ struct MenuBar: View {
     var name: String
     var color: (backColor: Color, textColor: Color)
     var isMainMenu: Bool
+    @Binding var changeView: Bool
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
@@ -26,6 +27,10 @@ struct MenuBar: View {
                            Image(systemName: "arrowshape.turn.up.left")
                                .foregroundColor(color.textColor)
                                .padding(.trailing, 10)
+                               .onTapGesture {
+                                   changeView = false
+                               }
+                                
                        }
                     }
                     Text(name).foregroundColor(color.textColor).bold()
@@ -75,13 +80,15 @@ struct menuModifier: ViewModifier {
 }
 
 struct HomeScreen: View {
+    @StateObject var birds = birdCollection()
+    @State var changeView: Bool = false
     var viewName = "Birdspot"
     var titleColor = (backColor: Color.gray, textColor: Color.white)
     var body: some View {
         GeometryReader { geometrey in
             VStack(spacing: 0){
-                MenuBar(name: viewName, color: titleColor , isMainMenu: true)
-                ColorPaletteView()
+                MenuBar(name: viewName, color: titleColor , isMainMenu: true, changeView: $changeView)
+                ColorPaletteView(changeView: $changeView)
 
             }
         }
@@ -107,10 +114,12 @@ struct InformationView: View {
     var viewName = "Information View"
     var titleColor = (backColor: Color.pink, textColor: Color.black)
     var filter: String = ""
+    @Binding var changeView: Bool
+    
     var body: some View {
         GeometryReader { geometry in
                 VStack(spacing: 0) {
-                    MenuBar(name: viewName, color: titleColor , isMainMenu: false)
+                    MenuBar(name: viewName, color: titleColor , isMainMenu: false, changeView: $changeView)
                     Text("The information page will have birds to browse and read information about")
                     List {
                         if(filter != "") {
