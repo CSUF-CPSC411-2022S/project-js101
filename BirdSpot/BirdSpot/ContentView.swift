@@ -121,33 +121,44 @@ struct InformationView: View {
                 VStack(spacing: 0) {
                     MenuBar(name: viewName, color: titleColor , isMainMenu: false, changeView: $changeView)
                     Text("The information page will have birds to browse and read information about")
-                    List {
-                        if(filter != "") {
+                    if self.changeView == false {
+                        List {
+                            if(filter != "") {
+                                ForEach(data.birds) {
+                                    bird in
+                                    if(bird.color == filter) {
+                                        Section(header: Text(bird.name)) {
+                                            NavigationLink(destination: BirdView(bird: bird)) {
+                                                AsyncImage(url: URL(string: bird.images[0])){ image in
+                                                    image.resizable()
+                                                } placeholder: {
+                                                    ProgressView()
+                                                }.frame(width:200, height: 120)                                        }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    else {
+                        let query = filter.lowercased()
+                        List {
                             ForEach(data.birds) {
                                 bird in
-                                if(bird.color == filter) {
+                                if(bird.name.lowercased().contains(query) || bird.color.lowercased().contains(query)) {
                                     Section(header: Text(bird.name)) {
                                         NavigationLink(destination: BirdView(bird: bird)) {
                                             AsyncImage(url: URL(string: bird.images[0])){ image in
                                                 image.resizable()
                                             } placeholder: {
                                                 ProgressView()
-                                            }.frame(width:200, height: 120)                                        }
-                                    }
-                                }
-                            }
-                        } else {
-                            ForEach(data.birds) {
-                                bird in
-                                Section(header: Text(bird.name)) {
-                                    NavigationLink(destination: BirdView(bird: bird)) {
-                                        Text(bird.name)
+                                            }.frame(width:200, height: 120)
+                                        }
                                     }
                                 }
                             }
                         }
-                }
-                    Spacer()
+                    }
             }
         }
     }

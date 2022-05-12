@@ -18,7 +18,7 @@ struct ColorPaletteView: View {
         GeometryReader { geometry in
             NavigationView {
                     if self.changeView == true {
-                        InformationView(titleColor: (backColor:Color.gray, textColor: Color.black), changeView: $changeView)
+                        InformationView(titleColor: (backColor:Color.gray, textColor: Color.black), filter: searchText, changeView: $changeView)
                     }
                     else {
                         // This Vstack acts as a container for the entire page

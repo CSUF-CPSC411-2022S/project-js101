@@ -18,13 +18,17 @@ struct BirdView: View {
                 ProgressView()
             }.frame(width:300, height: 180)
             Text(bird.name)
-            Text(bird.description)
+            HStack{
+                Spacer()
+                Text(bird.description)
+                Spacer()
+            }
             List{
             NavigationLink(destination: Moreimages()){
-                Text("For more images of Bald Eagle")
+                Text("For more images of \(bird.name)")
             }
             NavigationLink(destination: Moreinformation()){
-                Text("For more information of Bald Eagle")
+                Text("For more information of \(bird.name)")
             }
             }
         }
