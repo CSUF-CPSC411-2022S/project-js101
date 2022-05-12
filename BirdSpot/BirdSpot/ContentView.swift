@@ -13,7 +13,6 @@ struct MenuBar: View {
     var name: String
     var color: (backColor: Color, textColor: Color)
     var isMainMenu: Bool
-    @Binding var changeView: Bool
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
@@ -27,10 +26,6 @@ struct MenuBar: View {
                            Image(systemName: "arrowshape.turn.up.left")
                                .foregroundColor(color.textColor)
                                .padding(.trailing, 10)
-                               .onTapGesture {
-                                   changeView = false
-                               }
-                                
                        }
                     }
                     Text(name).foregroundColor(color.textColor).bold()
@@ -81,14 +76,13 @@ struct menuModifier: ViewModifier {
 
 struct HomeScreen: View {
     @StateObject var birds = birdCollection()
-    @State var changeView: Bool = false
     var viewName = "Birdspot"
     var titleColor = (backColor: Color.gray, textColor: Color.white)
     var body: some View {
         GeometryReader { geometrey in
             VStack(spacing: 0){
-                MenuBar(name: viewName, color: titleColor , isMainMenu: true, changeView: $changeView)
-                ColorPaletteView(changeView: $changeView)
+                MenuBar(name: viewName, color: titleColor, isMainMenu: true)
+                ColorPaletteView()
 
             }
         }
@@ -114,19 +108,22 @@ struct InformationView: View {
     var viewName = "Information View"
     var titleColor = (backColor: Color.pink, textColor: Color.black)
     var filter: String = ""
-    @Binding var changeView: Bool
     
     var body: some View {
         GeometryReader { geometry in
                 VStack(spacing: 0) {
-                    MenuBar(name: viewName, color: titleColor , isMainMenu: false, changeView: $changeView)
+                    MenuBar(name: viewName, color: titleColor , isMainMenu: false)
                     Text("The information page will have birds to browse and read information about")
-                    if self.changeView == false {
+                    let query = filter.lowercased()
+                    // can we find a whole string match from filter to color, if so assume a color palette press.
+                    let results = data.birds.filter { $0.color == query }
+                    let isColor = !results.isEmpty
                         List {
-                            if(filter != "") {
+                            // run specific functionality if color, if not color, filter search
+                            if(isColor) {
                                 ForEach(data.birds) {
                                     bird in
-                                    if(bird.color == filter) {
+                                    if(bird.color == query) {
                                         Section(header: Text(bird.name)) {
                                             NavigationLink(destination: BirdView(bird: bird)) {
                                                 AsyncImage(url: URL(string: bird.images[0])){ image in
@@ -138,27 +135,26 @@ struct InformationView: View {
                                     }
                                 }
                             }
-                        }
-                    }
-                    else {
-                        let query = filter.lowercased()
-                        List {
-                            ForEach(data.birds) {
-                                bird in
-                                if(bird.name.lowercased().contains(query) || bird.color.lowercased().contains(query)) {
-                                    Section(header: Text(bird.name)) {
-                                        NavigationLink(destination: BirdView(bird: bird)) {
-                                            AsyncImage(url: URL(string: bird.images[0])){ image in
-                                                image.resizable()
-                                            } placeholder: {
-                                                ProgressView()
-                                            }.frame(width:200, height: 120)
+                            else {
+                                    ForEach(data.birds) {
+                                            bird in
+                                        if ((bird.name.lowercased().contains(query) || bird.color.lowercased().contains(query))) {
+                                                Section(header: Text(bird.name)) {
+                                                    NavigationLink(destination: BirdView(bird: bird)) {
+                                                        AsyncImage(url: URL(string: bird.images[0])){ image in
+                                                            image.resizable()
+                                                        } placeholder: {
+                                                            ProgressView()
+                                                        }.frame(width:200, height: 120)
+                                                    }
+                                                }
+                                            
                                         }
+                                    
                                     }
-                                }
                             }
-                        }
                     }
+                    
             }
         }
     }

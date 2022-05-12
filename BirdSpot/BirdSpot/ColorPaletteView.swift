@@ -11,14 +11,13 @@ import SwiftUI
 
 struct ColorPaletteView: View {
     @State var searchText: String = ""
-    @Binding var changeView: Bool
-
+    @State var changeView: Bool = false
     
     var body: some View {
         GeometryReader { geometry in
             NavigationView {
                     if self.changeView == true {
-                        InformationView(titleColor: (backColor:Color.gray, textColor: Color.black), filter: searchText, changeView: $changeView)
+                        NavigationLink("", destination: InformationView(titleColor: (backColor:Color.gray, textColor: Color.black), filter: searchText), isActive: $changeView)
                     }
                     else {
                         // This Vstack acts as a container for the entire page
@@ -59,15 +58,15 @@ struct ColorPaletteView: View {
                             VStack {
                                 HStack {
                                     Spacer()
-                                    NavigationLink(destination: InformationView(titleColor: (backColor:Color.red, textColor: Color.black), filter: "red", changeView: $changeView)) {
+                                    NavigationLink(destination: InformationView(titleColor: (backColor:Color.red, textColor: Color.black), filter: "red")) {
                                         Circle().strokeBorder(Color.black, lineWidth: 3).background(Circle().foregroundColor(Color.red)).frame(width: geometry.size.width * 0.2, height: geometry.size.width * 0.2)
                                     }
                                     Spacer()
-                                    NavigationLink(destination: InformationView(titleColor: (backColor:Color.gray, textColor: Color.black), filter: "gray", changeView: $changeView)) {
+                                    NavigationLink(destination: InformationView(titleColor: (backColor:Color.gray, textColor: Color.black), filter: "gray")) {
                                         Circle().strokeBorder(Color.black, lineWidth: 3).background(Circle().foregroundColor(Color.gray)).frame(width: geometry.size.width * 0.2, height: geometry.size.width * 0.2)
                                     }
                                     Spacer()
-                                    NavigationLink(destination: InformationView(titleColor: (backColor:Color.yellow, textColor: Color.black), filter: "yellow", changeView: $changeView)) {
+                                    NavigationLink(destination: InformationView(titleColor: (backColor:Color.yellow, textColor: Color.black), filter: "yellow")) {
                                         Circle().strokeBorder(Color.black, lineWidth: 3).background(Circle().foregroundColor(Color.yellow)).frame(width: geometry.size.width * 0.2, height: geometry.size.width * 0.2)
                                     }
                                     Spacer()
@@ -75,15 +74,15 @@ struct ColorPaletteView: View {
                                 
                                 HStack {
                                     Spacer()
-                                    NavigationLink(destination: InformationView(titleColor: (backColor:Color.green, textColor: Color.black), filter: "green", changeView: $changeView)) {
+                                    NavigationLink(destination: InformationView(titleColor: (backColor:Color.green, textColor: Color.black), filter: "green")) {
                                         Circle().strokeBorder(Color.black, lineWidth: 3).background(Circle().foregroundColor(Color.green)).frame(width: geometry.size.width * 0.2, height: geometry.size.width * 0.2)
                                     }
                                     Spacer()
-                                    NavigationLink(destination: InformationView(titleColor: (backColor:Color.blue, textColor: Color.black), filter: "blue", changeView: $changeView)) {
+                                    NavigationLink(destination: InformationView(titleColor: (backColor:Color.blue, textColor: Color.black), filter: "blue")) {
                                         Circle().strokeBorder(Color.black, lineWidth: 3).background(Circle().foregroundColor(Color.blue)).frame(width: geometry.size.width * 0.2, height: geometry.size.width * 0.2)
                                     }
                                     Spacer()
-                                    NavigationLink(destination: InformationView(titleColor: (backColor:Color.purple, textColor: Color.black), filter: "purple", changeView: $changeView)) {
+                                    NavigationLink(destination: InformationView(titleColor: (backColor:Color.purple, textColor: Color.black), filter: "purple")) {
                                         Circle().strokeBorder(Color.black, lineWidth: 3).background(Circle().foregroundColor(Color.purple)).frame(width: geometry.size.width * 0.2, height: geometry.size.width * 0.2)
                                     }
                                     Spacer()
@@ -91,15 +90,15 @@ struct ColorPaletteView: View {
                                 
                                 HStack {
                                     Spacer()
-                                    NavigationLink(destination: InformationView(titleColor: (backColor:Color.brown, textColor: Color.black), filter: "brown", changeView: $changeView)) {
+                                    NavigationLink(destination: InformationView(titleColor: (backColor:Color.brown, textColor: Color.black), filter: "brown")) {
                                         Circle().strokeBorder(Color.black, lineWidth: 3).background(Circle().foregroundColor(Color.brown)).frame(width: geometry.size.width * 0.2, height: geometry.size.width * 0.2)
                                     }
                                     Spacer()
-                                    NavigationLink(destination: InformationView(titleColor: (backColor:Color.white, textColor: Color.black), filter: "white", changeView: $changeView)) {
+                                    NavigationLink(destination: InformationView(titleColor: (backColor:Color.white, textColor: Color.black), filter: "white")) {
                                         Circle().strokeBorder(Color.black, lineWidth: 3).background(Circle().foregroundColor(Color.white)).frame(width: geometry.size.width * 0.2, height: geometry.size.width * 0.2)
                                     }
                                     Spacer()
-                                    NavigationLink(destination: InformationView(titleColor: (backColor:Color.black, textColor: Color.white), filter: "black", changeView: $changeView)) {
+                                    NavigationLink(destination: InformationView(titleColor: (backColor:Color.black, textColor: Color.white), filter: "black")) {
                                         Circle().strokeBorder(Color.black, lineWidth: 3).background(Circle().foregroundColor(Color.black)).frame(width: geometry.size.width * 0.2, height: geometry.size.width * 0.2)
                                     }
                                     Spacer()
