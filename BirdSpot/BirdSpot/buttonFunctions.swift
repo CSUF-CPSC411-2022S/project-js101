@@ -6,9 +6,28 @@
 //
 
 import Foundation
+import SwiftUI
+import MapKit
+import CoreLocation
 
-func openLocationMenu() { }
-func changeLanguage() { }
-func toggleDarkMode() { }
 func goBack() { }
-func openPhotoView() { }
+func openLocationMenu() { }
+
+
+
+struct Settings :View {
+    @AppStorage("isDarkMode") var isDarkMode = false
+    var body: some View{
+        VStack{
+            Picker("Mode", selection: $isDarkMode)
+            {
+                Text("Light")
+                    .tag(false)
+                Text("Dark")
+                    .tag(true)
+            }.pickerStyle(SegmentedPickerStyle())
+                .padding()
+            
+        }
+    }
+}

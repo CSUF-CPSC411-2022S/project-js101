@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct BirdSpotApp: App {
+    @AppStorage("isDarkMode") private var isDarkMode = false
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environment(\.colorScheme, isDarkMode ? .dark :.light)
         }
     }
 }

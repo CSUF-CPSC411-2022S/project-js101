@@ -26,17 +26,17 @@ struct ColorPaletteView: View {
                             // creating horizontal stacks so welcome and select messages can be left justified.
                             HStack {
                                 Text("Welcome!")
-                                    .font(.headline)
-                                    .padding()
-                                Spacer()
-                            }
-                            
+                                        .font(.largeTitle)
+                                        .padding()
+                                    Spacer()
+                                }
+                                Spacer().frame(height: 100)
                             HStack {
                                 Text("Select a color or search to start.")
                                     .fontWeight(.medium)
                                     .font(Font.system(size: 14))
                                     .padding()
-                                Spacer()
+                                    Spacer()
                             }
                             
                             // TODO: run tests to ensure working textfield
@@ -108,8 +108,9 @@ struct ColorPaletteView: View {
                         
                         }
                     }
+                    Spacer()
                 }
-        }.hiddenNavBarStyle()
+        }
     }
 }
 

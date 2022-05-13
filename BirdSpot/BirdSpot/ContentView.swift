@@ -7,72 +7,31 @@
 
 
 import SwiftUI
+import UIKit
+import MapKit
+import CoreLocation
 
+class ViewController: UIViewController, CLLocationManagerDelegate {
+    let locationManager = CLLocationManager()
 
-struct MenuBar: View {
-    var name: String
-    var color: (backColor: Color, textColor: Color)
-    var isMainMenu: Bool
-    
-    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    
-    var body: some View {
-        GeometryReader { geometry in
-                HStack {
-                    if isMainMenu != true {
-                       Button(action: {
-                           self.mode.wrappedValue.dismiss()
-                       }) {
-                           Image(systemName: "arrowshape.turn.up.left")
-                               .foregroundColor(color.textColor)
-                               .padding(.trailing, 10)
-                       }
-                    }
-                    Text(name).foregroundColor(color.textColor).bold()
-                    Spacer()
-                    if isMainMenu == true {
-                        Menu {
-                            Text("Settings")
-                            Button("Location",action: openLocationMenu)
-                            Button("Language",action: changeLanguage)
-                            Button("Dark Mode", action: toggleDarkMode)
-                        } label: {
-                            Image(systemName: "line.3.horizontal")
-                                .foregroundColor(color.textColor)
-                                .padding(.trailing, 10)
-                        }
-                    }
-                }
-                    .modifier(menuModifier(menuColor: color, isMM: isMainMenu))
-                    .frame(width:geometry.size.width)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        locationManager.requestWhenInUseAuthorization()
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
         }
-            .frame(height: 60)
-            .hiddenNavBarStyle()
     }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+          guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+          print("locations = \(locValue.latitude) \(locValue.longitude)")
+      }
 }
 
 
 
-struct menuModifier: ViewModifier {
-    var menuColor: (backColor: Color, textColor: Color)
-    var isMM: Bool
-    func body(content: Content) -> some View {
-        if isMM {
-            content
-                .font(.system(size:24))
-                .frame(height: 60)
-                .padding(.leading,10)
-                .background(menuColor.backColor)
-        } else {
-            content
-                .font(.system(size:24))
-                .frame(height: 60)
-                .padding(.leading,10)
-                .background(menuColor.backColor)
-                .cornerRadius(10)
-        }
-    }
-}
 
 struct HomeScreen: View {
     @StateObject var birds = birdCollection()
@@ -80,10 +39,12 @@ struct HomeScreen: View {
     var titleColor = (backColor: Color.gray, textColor: Color.white)
     var body: some View {
         GeometryReader { geometrey in
-            VStack(spacing: 0){
-                MenuBar(name: viewName, color: titleColor, isMainMenu: true)
-                ColorPaletteView()
+            NavigationView {
+                VStack(spacing: 0){
+                    MenuBar(name: viewName, color: titleColor , isMainMenu: true)
+                    ColorPaletteView()
 
+                }
             }
         }
     }
@@ -113,7 +74,7 @@ struct InformationView: View {
         GeometryReader { geometry in
                 VStack(spacing: 0) {
                     MenuBar(name: viewName, color: titleColor , isMainMenu: false)
-                    Text("The information page will have birds to browse and read information about")
+                    //Text("The information page will have birds to browse and read information about")
                     let query = filter.lowercased()
                     // can we find a whole string match from filter to color, if so assume a color palette press.
                     let results = data.birds.filter { $0.color == query }
@@ -161,18 +122,5 @@ struct InformationView: View {
         
 }
 
-struct hideNavBar : ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .navigationBarTitle("",displayMode: .inline)
-            .navigationBarHidden(true)
-    }
-}
-
-extension View {
-    func hiddenNavBarStyle() -> some View {
-        modifier(hideNavBar())
-    }
-}
 
 
