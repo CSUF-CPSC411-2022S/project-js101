@@ -19,11 +19,16 @@ struct BirdView: View {
                 ProgressView()
             }.frame(width:300, height: 180)
             Text(bird.description).padding()
+            HStack{
+                Spacer()
+                Text(bird.description)
+                Spacer()
+            }
             List{
-                NavigationLink(destination: Moreimages(bird: bird)){
+            NavigationLink(destination: Moreimages(bird: bird)){
                 Text("For more images of \(bird.name)")
             }
-                NavigationLink(destination: Moreinformation(bird: bird)){
+            NavigationLink(destination: Moreinformation(bird: bird)){
                 Text("For more information of \(bird.name)")
             }
             }
