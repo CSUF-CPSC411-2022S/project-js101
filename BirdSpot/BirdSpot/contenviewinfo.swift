@@ -13,7 +13,7 @@ struct BirdView: View {
     var body: some View{
         GeometryReader { geometry in
             VStack(spacing: 0){
-                MenuBar(name: bird.name, color: (backColor: Color.gray, textColor: Color.black), isMainMenu: false )
+                MenuBar(name: bird.name, color: findBirdColor(bird), isMainMenu: false )
                 AsyncImage(url: URL(string: bird.images[0])){ image in
                     image.resizable()
                         .scaledToFill()
@@ -40,7 +40,6 @@ struct BirdView: View {
 
 
 func findBirdColor(_ bird: birdData) -> (Color, Color) {
-    print("Im looking for the bird color")
     switch bird.color {
     case "red":
         return (backColor: Color.red, textColor: Color.black)
@@ -57,7 +56,7 @@ func findBirdColor(_ bird: birdData) -> (Color, Color) {
     case "black":
         return (backColor: Color.black, textColor: Color.white)
     case "gray":
-        return (backColor: Color.gray, textColor: Color.white)
+        return (backColor: Color.gray, textColor: Color.black)
     case "brown":
         return (backColor: Color.brown, textColor: Color.black)
     default:
