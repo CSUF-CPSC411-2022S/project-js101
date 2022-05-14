@@ -23,7 +23,7 @@ struct BirdView: View {
                 }.frame(width:geometry.size.width)
                 ScrollView {
                     Text(bird.description).padding()
-                }.frame(height: geometry.size.height/3)
+                }.frame(height: geometry.size.height/4)
                     List {
                         NavigationLink(destination: Moreimages(bird: bird)) {
                             Text("For more images of \(bird.name)")

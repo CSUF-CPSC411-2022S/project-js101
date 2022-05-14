@@ -86,12 +86,20 @@ struct InformationView: View {
                                     bird in
                                     if(bird.color == query) {
                                         Section(header: Text(bird.name)) {
+                                            HStack (spacing: 0) {
                                             NavigationLink(destination: BirdView(bird: bird)) {
+                                                
                                                 AsyncImage(url: URL(string: bird.images[0])){ image in
                                                     image.resizable()
+                                                        .scaledToFill()
+                                                        .frame(width:geometry.size.width)
+                                                        .padding(.trailing, 70)
                                                 } placeholder: {
-                                                    ProgressView()
-                                                }.frame(width:200, height: 120)                                        }
+                                                    ProgressView().padding(.trailing, 70)
+                                                }.frame(width:geometry.size.width, height: geometry.size.width * 0.7)
+                                                }
+                                            Spacer()
+                                            }
                                         }
                                     }
                                 }
