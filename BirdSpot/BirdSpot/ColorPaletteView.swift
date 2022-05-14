@@ -29,7 +29,7 @@ struct ColorPaletteView: View {
                                         .padding()
                                     Spacer()
                                 }
-                                Spacer().frame(height: 100)
+                            Spacer()
                             HStack {
                                 Text("Select a color or search to start.")
                                     .fontWeight(.medium)
@@ -53,7 +53,6 @@ struct ColorPaletteView: View {
                             .padding(6)
                             .background(RoundedRectangle(cornerRadius: 15).fill(Color.white).shadow(color: Color.black.opacity(0.15), radius: 10, x: 0, y: 0))
                             .frame(width: geometry.size.width * 0.90, height: geometry.size.height * 0.05)
-                            Spacer().frame(height: 30)
                             
                             // Vstack for the colors! TODO: make the individual circles naviagtion links
                             VStack {
